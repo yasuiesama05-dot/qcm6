@@ -111,13 +111,24 @@ async def main() -> None:
 
     if base_url:
         webhook_url = f"{base_url}/{url_path}"
-        await tg_app.bot.set_webhook(
-            url=webhook_url,
-            secret_token=secret,
-            allowed_updates=Update.ALL_TYPES,
-            drop_pending_updates=True,
-        )
-        logger.info("Webhook Telegram configuré : %s", webhook_url)
+        # On garde les updates en attente (drop_pending_updates=False) : quand
+        # l'instance gratuite se réveille après une mise en veille, les
+        # messages reçus entre-temps sont traités au lieu d'être perdus.
+        for attempt in range(1, 6):
+            try:
+                await tg_app.bot.set_webhook(
+                    url=webhook_url,
+                    secret_token=secret,
+                    allowed_updates=Update.ALL_TYPES,
+                    drop_pending_updates=False,
+                )
+                logger.info("Webhook Telegram configuré : %s", webhook_url)
+                break
+            except Exception as e:
+                logger.warning("set_webhook a échoué (essai %s/5) : %s", attempt, e)
+                if attempt == 5:
+                    raise
+                await asyncio.sleep(5)
     else:
         logger.warning(
             "RENDER_EXTERNAL_URL absent : le webhook Telegram n'a pas été "
