@@ -1,0 +1,26 @@
+# Ce fichier permet à Render de créer le service automatiquement
+# (Dashboard → New → Blueprint → choisis le dépôt GitHub).
+services:
+  - type: web
+    name: qcm-bot
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python render_app.py
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.7
+      # Token donné par @BotFather : à saisir dans le Dashboard (jamais dans Git).
+      - key: BOT_TOKEN
+        sync: false
+      # Secret aléatoire de l'URL du webhook, généré par Render.
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      # Chaîne obligatoire (le bot doit y être administrateur).
+      - key: REQUIRED_CHANNEL
+        value: "@qcMAX_batna"
+      # IDs Telegram des admins, séparés par des virgules.
+      - key: ADMIN_USER_IDS
+        value: "5696844039"

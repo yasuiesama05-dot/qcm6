@@ -1,0 +1,20 @@
+# Secrets / configuration locale
+.env
+.env.*
+
+# Données d'exécution (ne doivent pas être versionnées)
+bot_users.json
+reported_questions.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

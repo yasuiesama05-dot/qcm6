@@ -1,0 +1,2512 @@
+{
+  "module": "🕸️ Maladies systémiques",
+  "lessons": {
+    "1. Amylose": {
+      "​2026": [
+        {
+          "question": "À propos de la substance amyloïde, quelle(s) proposition(s) est/sont exacte(s) ?",
+          "options": [
+            "Elle est constituée de protéines fibrillaires insolubles organisées en feuillets β",
+            "Elle se colore en Hématéine Eosine et devient biréfringente en lumière polarisée",
+            "Elle s'accumule exclusivement dans le foie et la rate",
+            "Elle provoque une atrophie progressive des tissus où elle se dépose"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Concernant les différents types d'amylose et leur diagnostic, quelle(s) affirmation(s) est/sont correcte(s)?",
+          "options": [
+            "L'amylose AL est liée à la production anormale de chaînes légères d'immunoglobulines",
+            "L'amylose AA est secondaire à une inflammation avec excès de protéine SAA",
+            "L'amylose à transthyrétine est toujours génétique",
+            "Le diagnostic repose sur un ensemble d'argument clinique et radiologique"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Concernant l'amylose quelles sont les affirmations qui sont vraies ?",
+          "options": [
+            "Les fibrilles amyloïdes sont constituées toujours de protéines d'origines immunologiques",
+            "L'amylose est caractérisée par le dépôt extracellulaire de protéine sous forme de fibrille insoluble",
+            "L'amylose AA est secondaire à la production monoclonale de chaines légères",
+            "Parmi les caractéristiques de la substance amyloïde anhiste"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Concernant le diagnostic de l'amylose quelle les affirmations qui sont vraies",
+          "options": [
+            "La biopsie de la graisse cutanée est l'examen référence",
+            "La coloration hématéine-éosine permet de mettre en évidence le dépôt amyloïde",
+            "Dosage des chaines légères d'immunoglobulines permet le diagnostic de l'amylose AL",
+            "IRM cardiaque meilleur examen pour confirmer une amylose cardiaque"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "quelle association entre type d'amylose et protéine en cause est correcte?",
+          "options": [
+            "Amylose AA protéine SAA",
+            "Amylose ATTR-chaine légère d'immunoglobuline",
+            "Amylose héréditaire-protéine SAA",
+            "Amylose secondaire protéine sérum amyloïde A"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "Quelle complication grave est redoutée chez les patients non traités atteints de FMF?",
+          "options": [
+            "insuffisance cardiaque",
+            "amylose rénale",
+            "cirrhose hépatique",
+            "sclérose en plaque"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Quelles sont les manifestations cliniques qui sont évocatrice d'amylose systémique ?",
+          "options": [
+            "Protéinurie non néphrotique et insuffisance rénale",
+            "Cardiomyopathie restrictive",
+            "Purpura orbitaire",
+            "Macroglossie"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Concernant l'amylose AL",
+          "options": [
+            "Le principal critère diagnostique est la présence de dépôt amyloïde dans les neurones",
+            "Le traitement de première intention est la chimiothérapie et autogreffe de cellules souche",
+            "Se caractérise par la présence de chaine légère en excès (gammapathie monoclonale) dans le sérum et les urines",
+            "Le pronostic dépend du stade de la maladie et de la réponse au traitement"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les caractéristiques spécifiques de l'amylose à transthyrétine TTR quelle ou les quelles sont justes:",
+          "options": [
+            "Dépôt de fibrille amyloïde dans le cytoplasme cellulaire",
+            "Mutation du gène codant pour la transthyrétine TTR",
+            "La principale manifestation clinique est l'atteinte rénale",
+            "Dépôt de fibrille amyloïde dans le stroma des tissus"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        }
+      ]
+    },
+    "2. Déficits immunitaires": {
+      "​2026": [
+        {
+          "question": "Dans le bilan initial d'une suspicion de déficit immunitaire primitif chez l'enfant, quels examens sont classiquement indiqués ?",
+          "options": [
+            "Un hémogramme avec numération et formule sanguine, incluant la numération des lymphocytes",
+            "Une électrophorèse de l'hémoglobine",
+            "Un test cutané à la tuberculine (intradermoréaction)",
+            "Une électrophorèse des protéines sériques"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Concernant les déficits immunitaires primitifs, laquelle(s) de ces affirmations est/sont exacte(s) ?",
+          "options": [
+            "Ils sont toujours acquis au cours de la vie",
+            "Ils résultent d'une anomalie génétique constitutionnelle",
+            "Ils peuvent être causés par la chimiothérapie",
+            "Ils peuvent s'intégrer dans un cadre syndromique"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Concernant le déficit immunitaire humoral, cochez les réponses correctes :",
+          "options": [
+            "C'est un déficit immunitaire congénital",
+            "Se manifeste par des infections à germes intracellulaires",
+            "Apparait après le 6ème mois chez le nouveau né",
+            "se manifeste par une cassure de la courbe de température"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "question": "Parmi les étiologies suivantes, identifiez celles qui sont responsables d'un déficit immunitaire secondaire :",
+          "options": [
+            "Hypertension artérielle",
+            "Diabète",
+            "Insuffisance rénale chronique",
+            "thrombopénie"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Le déficit immunitaire secondaire",
+          "options": [
+            "Il est toujours lié à une infection par le VIH",
+            "Il peut résulter d'une chimiothérapie",
+            "La malnutrition est une cause possible",
+            "Il est irréversible"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Le déficit immunitaire primitif",
+          "options": [
+            "Il est toujours acquis au cours de la vie",
+            "Il résulte d'une anomalie génétique",
+            "Il peut être causé par le VIH",
+            "Il est souvent testé chez l'enfant"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Parmi les propositions suivantes quelles sont les causes des déficits immunitaires secondaires?",
+          "options": [
+            "Traitement par des antibiotiques",
+            "Diabète déséquilibré",
+            "Coinfection VIH",
+            "Traitement immunosuppresseur"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les propositions suivantes quelles sont les manifestations révélatrices des déficits immunitaires?",
+          "options": [
+            "Cassure de la courbe staturo pondérale",
+            "Dyspnée",
+            "Les infections sévères à répétitions",
+            "Diarrhée chronique"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "3. Granulomatose": {
+      "​2026": [
+        {
+          "question": "Quels sont les signes permettant d'orienter vers une granulomatose systémique ?",
+          "options": [
+            "Fièvre aigue",
+            "Un trouble de rythme cardiaque",
+            "perturbation du bilan hépatique",
+            "uvéite"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Le granulome inflammatoire se voit dans : cochez la ou les réponses justes :",
+          "options": [
+            "La maladie de Crohn",
+            "La cholangite biliaire primitive",
+            "La pneumopathie interstitielle",
+            "La biopsie de l'érythème noueux"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "A propos de granulomatose systémique: cocher la réponse ou les réponses justes",
+          "options": [
+            "La présence de nécrose caséeuse est toujours synonyme de tuberculose",
+            "L'étude microbiologique doit être toujours associée à l'examen histologique.",
+            "Est toujours recherchée devant un bilan inflammatoire chronique.",
+            "Le muscle est un site privilégié pour la biopsie."
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Le granulome inflammatoire se voit dans: cochez la ou les réponses justes",
+          "options": [
+            "La maladie de crohn",
+            "La cholangite biliaire primitive",
+            "La pneumopathie interstitielle",
+            "La biopsie de l'érythème noueux"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "quels sont les signes permettant d'orienter vers une granulomatose systémique:",
+          "options": [
+            "Fièvre aigue",
+            "Un trouble de rythme cardiaque",
+            "perturbation du bilan hépatique",
+            "Uvéite"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Parmi les propositions suivantes, quelles sont les pathologies responsables de la formation de granulome inflammatoire ?",
+          "options": [
+            "tuberculose intestinale",
+            "maladie de Crohn",
+            "maladie de Horton",
+            "sarcoidose"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quels sont les sites des biopsies à réaliser devant une suspicion de granulomatose systémique :",
+          "options": [
+            "L'artère temporale",
+            "La ponction biopsie osseuse",
+            "Biopsie hépatique",
+            "Biopsie des glandes salivaires"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "4. Lupus érythémato disséminé": {
+      "​2026": [
+        {
+          "question": "Au cours du lupus érythémateux systémique, les lésions cutanéo-muqueuses présentent la ou les caractéristiques suivantes (cochez la ou les proposition(s) justes):",
+          "options": [
+            "Les lésions muqueuses du LES se traduisent par des aphtes buccaux contemporains des poussés évolutives",
+            "L'alopécie survenant en dehors du lupus discoïde est une lésion spécifique, réversible",
+            "Le purpura pétéchial péri-unguéal est une lésion vasculaire cutanée spécifique aiguë",
+            "Les lésions cutanées annulaires sont spécifiques évoluant sur un mode subaigu"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s)",
+          "options": [
+            "Les anticorps anti-Sm, les plus spécifiques du LES, présents chez la majorité des patients",
+            "Les autoanticorps anti-DNA natifs sont spécifiques du LES, leurs absence exclue ce diagnostic",
+            "La détection de sang à la chimie des urines suffit à confirmer l'hématurie microscopique",
+            "L'anticoagulant circulant lupique est le plus thrombogène des anticorps du SAPL"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Cochez la ou les proposition(s) fausse(s)",
+          "options": [
+            "Un test de Coombs direct positif au cours du LES, accompagné toujours d'une anémie hémolytique auto-immune",
+            "Un SAPL est associé au LES est confirmé par la présence des anticorps antiphospholipides",
+            "Le taux normal de la CRP au cours du LES est dû à l'inhibition de sa synthèse hépatique par l'interleukine",
+            "un facteur rhumatoïde positif au cours du LES témoigne d'une polyarthrite rhumatoïde associée"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) fausse(s):",
+          "options": [
+            "La rémission d'une néphropathie lupique est obtenue si la protéinurie < 600 mg/24 heures",
+            "La détection de sang à la chimie des urines suffit à confirmer l'hématurie microscopique",
+            "Au cours du LES, une protéinurie des 24 heures > 3 gr/jour confirme l'origine glomérulaire de la néphropathie lupique",
+            "Lors de la PBR, l'étude en immunofluorescence permet de préciser les anomalies histologiques de la néphropathie lupique"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s)",
+          "options": [
+            "Le LES est la connectivite qui s'accompagne le plus fréquemment d'une pneumopathie interstitielle diffuse",
+            "L'inflammation chronique est la principale cause de cardiopathie ischémique lors du LES",
+            "Au cours du LES, un test de Coombs positif s'accompagne toujours d'une anémie hémolytique autoimmune",
+            "Lors du LES, le SAPL associé est le seul responsable des thromboses veineuses et artérielles"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s)",
+          "options": [
+            "Le LES est la connectivite qui s'accompagne le moins fréquemment d'une pneumopathie interstitielle diffuse",
+            "L'endocardite de Libman-Sachs se caractérise par épaississement valvulaire sous forme de verrues",
+            "Les ulcérations buccales lors du LES sont des lésions évoluant sur un mode aigu",
+            "La main de Jaccoud est une arthropathie chronique déformante des MCP sans destruction articulaire"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s):",
+          "options": [
+            "Le lupus discoïde lésion cutanée spécifique du LES évoluant sur mode aigu",
+            "L'alopécie diffuse au cours du LES est réversible évoluant sur un mode aigu",
+            "Le lupus engelure est une lésion cutanée spécifique du LES évoluant sur un mode aigu",
+            "Le livido est une lésion vasculaire spécifique du LES"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s), chez la femme lupique",
+          "options": [
+            "l'azathioprine est autorisée au cours de la grossesse",
+            "Mycophenolate mofetil est contre-indiqué au cours la grossesse",
+            "Le méthotrexate est autorisé au cours de la grossesse",
+            "La cyclosporine est autorisée au cours de la grossesse"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Quel immunosuppresseur est utilisé préférentiellement dans le lupus érythémateux disséminé avec atteinte rénale sévère ?",
+          "options": [
+            "Méthotrexate",
+            "Cyclophosphamide",
+            "Sulfasalazine",
+            "Infliximab"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Au cours du lupus érythémateux systémique, les lésions cutanéo-muqueuses présentent les caractéristiques suivantes : Cochez la ou les proposition(s) fausse(s)",
+          "options": [
+            "L'alopécie en rapport avec le lupus discoïde est une lésion chronique irréversible",
+            "Le purpura pétéchial péri-unguéal est une lésion vasculaire cutanée spécifique aiguë",
+            "L'atteinte muqueuse se traduit par des ulcérations buccales chroniques",
+            "Les lésions cutanées annulaires sont spécifiques évoluant sur un mode subaigu"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Cocher la ou les proposition(s) juste(s)",
+          "options": [
+            "La main de Jaccoud est une déformation de la main due à des érosions articulaires",
+            "La glomérulonéphrite lupique de classe VI se traduit par une insuffisance rénale chronique irréversible",
+            "L'endocardite de Libman-Sacks est aseptique nécessitant une antibioprophylaxie",
+            "L'absence d'augmentation de la CRP lors des poussées de LES est due à la présence d'auto-anticorps anti-CRP"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s)",
+          "options": [
+            "Le LES est la connectivite la plus fréquente",
+            "Le pronostic du LES est plus sévère chez l'homme que chez la femme",
+            "L'interleukine 6 est la cytokine pro-inflammatoire jouant un rôle majeur dans l'étiopathogénie du LES",
+            "L'anticoagulant circulant lupique est le plus thrombogène des anticorps du SAPL chez les lupiques"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les réponse(s) faussé(s)",
+          "options": [
+            "Les autoanticorps anti-DNA natifs sont spécifiques du LES, leurs absence exclue le diagnostic",
+            "La non élévation du taux de la CRP lors des poussés de LED est due à des autoanticorps anti-CRP",
+            "La présence du facteur rhumatoïde lors du LES est le témoin d'une polyarthrite rhumatoïde associée",
+            "La présence isolée des anticorps anti-SSB/La lors du LES s'observe souvent en cas de syndrome sec associé"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "L'atteinte cutanéo-muqueuse au cours du LES présente les caractéristiques suivantes : Cocher la ou les propositions (s) fausse(s)",
+          "options": [
+            "L'érythème en ailes de papillon est une lésion spécifique et aiguë",
+            "alopécie survenant en dehors du lupus discoïde est une lésion spécifique, réversible",
+            "lupus engelure est lésion cutanée aigue Spécifique",
+            "Les lésions muqueuses se traduisent par des aphtes buccaux contemporains des poussés évolutives"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "5. Maladie de Behçet": {
+      "​2026": [
+        {
+          "question": "Quelles affirmations concernant les manifestations oculaires de la maladie de Behçet sont correctes ? Cochez les réponses justes :",
+          "options": [
+            "La rétinopathie est une complication fréquente",
+            "L'uvéite antérieure est la forme la plus courante",
+            "Les lésions oculaires peuvent mener à la cécité",
+            "Les manifestations oculaires sont toujours unilatérales"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "question": "Parmi les critères suivants, lequel est un critère majeur du diagnostic de la maladie de Behçet selon les critères ACR ?",
+          "options": [
+            "Aphtes buccaux récurrents",
+            "Érythème en vespertilio",
+            "Arthrite asymétrique",
+            "Anticorps anti-SSA"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Concernant les caractéristiques cliniques de la maladie de behcet : cocher la réponse fausse :",
+          "options": [
+            "Elle est rarement associé à une atteinte oculaire",
+            "les aphtes buccogénitaux sont fréquents et récurrent",
+            "l'atteinte articulaire est fréquente",
+            "les manifestations cutanées peuvent inclure une pseudofolliculite et un érythème noueux"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "Concernant les caractéristiques cliniques de la maladie de Behçet : cochez les réponses correctes :",
+          "options": [
+            "C'est une vascularite à prédominance féminine",
+            "Elle est souvent associée à des atteintes oculaires",
+            "Les aphtoses buccogénitales sont fréquentes et récurrentes",
+            "Elle peut se manifester par des thromboses artérioveineuse"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Behçet est une vascularite systémique touchant :",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les petits vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Toutes les réponses sont justes"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "Le traitement des manifestations muqueuses et articulaires de la maladie de Behçet repose sur :",
+          "options": [
+            "L'Azathioprine",
+            "La Colchicine",
+            "Les immunoglobuline",
+            "Le cyclophosphamide"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "L'aphtose buccale récidivante peut se voir au cours de :",
+          "options": [
+            "La maladie cœliaque",
+            "La maladie de Crohn",
+            "La maladie de Behçet",
+            "La maladie de Horton"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "L'aphtose buccale récidivante peut se voir au cours de :",
+          "options": [
+            "La maladie cœliaque",
+            "La maladie de Crohn",
+            "La maladie de Behçet",
+            "La maladie de Horton"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "La maladie de Behçet est une vascularite systémique touchant:",
+          "options": [
+            "Les artères",
+            "Les veines",
+            "Les capillaires",
+            "Aucune proposition juste"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "La maladie de Behçet est une vascularite systémique touchant:",
+          "options": [
+            "Les artères",
+            "Les veines",
+            "Les capillaires",
+            "Aucune proposition juste"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Le traitement des manifestations muqueuses et articulaires de la maladie de Behçet repose sur",
+          "options": [
+            "Les immunoglobulines",
+            "La Colchicine",
+            "L'Azathioprine",
+            "Le Rituximab"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ]
+    },
+    "6. Maladie de Sjögren": {
+      "​2026": [
+        {
+          "question": "Parmi les symptômes suivants, lesquels pourraient indiquer une dégénérescence associée au syndrome de Sjögren",
+          "options": [
+            "Fièvre",
+            "Asthénie",
+            "Amaigrissent",
+            "Adénopathies"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quel est l'impact du syndrome de Sjögren sur la qualité de vie des patients ?",
+          "options": [
+            "Peu d'impact",
+            "Impact modéré sur la qualité de vie",
+            "Impact significatif, comparable à d'autres maladies chroniques",
+            "Impact uniquement sur la santé mentale"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Parmi les symptômes suivants, lesquels peuvent orienter vers une dégénérescence associée au syndrome de Sjögren?",
+          "options": [
+            "Asthénie",
+            "Fièvre",
+            "Amaigrissent",
+            "adénopathies"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les symptômes suivants, quels sont ceux qui sont fréquemment associés au syndrome de sjogren?",
+          "options": [
+            "adénopathies",
+            "Douleurs articulaires",
+            "Fièvre",
+            "Sécheresse buccale"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "quel est l'aspect histologique caractéristique de biopsie des glandes salivaires accessoires dans le syndrome de Gougerot-Sjögren?",
+          "options": [
+            "Aspect de sialadénite diffuse avec infiltrat neutrophilique",
+            "Aspect de sialadénite focale avec infiltrat lymphoplasmocytaire",
+            "Aspect de sialadénite granulomateuse avec fibrose",
+            "Aspect de sialadénite kystique avec calcification"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Les signes cliniques indiquant une possible dégénérescence dans le syndrome de Sjögren sont :",
+          "options": [
+            "Poly arthralgies",
+            "Fièvre",
+            "Amaigrissement",
+            "Asthénie"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Parmi les symptômes suivants, quels sont ceux qui sont fréquemment associés au syndrome de Sjogren ?",
+          "options": [
+            "adénopathies",
+            "Douleurs articulaires",
+            "amaigrissement",
+            "Sécheresse buccale"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les symptômes suivants, quels sont ceux qui sont fréquemment associés au syndrome de sjogren",
+          "options": [
+            "Sécheresse oculaire",
+            "Douleurs articulaires",
+            "Fièvre",
+            "Rash cutané"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Quels tests peuvent être utilisés pour évaluer la sécheresse oculaire chez un patient suspecté du syndrome de sjogren?",
+          "options": [
+            "Test de Schirmer",
+            "Tomographie par cohérence optique (OCT)",
+            "Electroretinographie",
+            "Temps de rupture du film lacrymal (BUT)"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Quels tests peuvent être utilisés pour évaluer la sécheresse oculaire chez un patient suspecté du syndrome de sjogren?",
+          "options": [
+            "Test de Schirmer",
+            "Tomographie par cohérence optique (OCT)",
+            "Electroretinographie",
+            "Temps de rupture du film lacrymal (BUT)"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "7. Maladies auto immunes chez l'enfant": {
+      "​2026": [
+        {
+          "question": "Dans le lupus érythémateux disséminé de l'enfant, cochez les réponses fausses :",
+          "options": [
+            "Les atteintes cutanées, articulaires et hématologiques sont les plus fréquentes",
+            "L'atteinte rénale est plus fréquente que chez l'adulte",
+            "Une meilleure réponse au traitement"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Chez l'enfant, le lupus Erythémateux Disséminé est caractérisé par, cocher les bonnes réponses:",
+          "options": [
+            "La sévérité des atteintes.",
+            "Les manifestations cliniques initiales polymorphes et parfois trompeuses.",
+            "Une meilleure réponse au traitement",
+            "Toutes les réponses sont justes"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Chez l'enfant, le lupus Erythémateux Disséminé est caractérisé par (cochez les bonnes réponses) :",
+          "options": [
+            "La sévérité des atteintes.",
+            "Les manifestations cliniques initiales polymorphes et parfois trompeuses.",
+            "Une meilleure réponse au traitement",
+            "La guérison spontanée."
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Chez l'enfant, le lupus érythémateux disséminé se distingue par :",
+          "options": [
+            "Une meilleure efficacité du traitement",
+            "Le caractère polymorphe et parfois trompeur des premiers signes",
+            "La gravité des atteintes.",
+            "Une guérison naturelle sans nécessité thérapeutique."
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "8. Maladies auto-inflammatoires": {
+      "​2026": [
+        {
+          "question": "La maladie de Still de l'adulte se caractérise par :",
+          "options": [
+            "Fièvre prolongée, souvent vespéro-nocturne",
+            "Photosensibilité",
+            "FAN et FR positifs",
+            "Hyperferritinémie"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Quelles sont les complications redoutées de la maladie de Still de l'adulte ?",
+          "options": [
+            "Syndrome d'activation macrophagique",
+            "Péricardite ou myocardite",
+            "Insuffisance rénale aiguë d'origine toxique",
+            "Amylose secondaire"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Parmi les éléments suivants, lequel n'est pas signe cardinal de la maladie de still de l'adulte",
+          "options": [
+            "fièvre en pics vespéraux",
+            "arthrite intermittente non destructrice",
+            "polyneuropathie motrice progressive",
+            "éruption cutanée saumoné"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Quel est le principal symptôme systémique de la maladie de Still de l'adulte ?",
+          "options": [
+            "Polyarthrite érosive",
+            "Fièvre quotidienne vespérale",
+            "Éruption cutanée purpurique",
+            "Insuffisance rénale"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Quel est le principal type de crise observé chez les patients atteints de FMF ?",
+          "options": [
+            "Crise d'asthme",
+            "Crise abdominale",
+            "Crise cardiaque",
+            "Crise convulsive"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Quelle atteinte articulaire est fréquente dans l'AJI-S et la MSA?",
+          "options": [
+            "Arthrite érosive rapide",
+            "Arthrite intermittente non érosive",
+            "Arthrite avec ostéonécrose",
+            "Polyarthrite ankylosante"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Les maladies auto-inflammatoires présentent les caractéristiques suivantes : Cocher la ou les propositions fausse (s)",
+          "options": [
+            "Elles sont dues à des mutations génétiques touchant au moins 2 Gènes codant des protéines de l'immunité innée",
+            "La sécrétion excessive des cytokines pro-inflammatoires est due à l'hyperactivation des inflammasomes des cellules effectrices",
+            "Le syndrome fébrile récurrent évolue depuis 6 mois au plus",
+            "L'atteinte neurologique centrale est parmi les manifestations cliniques les plus fréquemment associé au syndrome fébrile"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les propositions suivantes concernant la fièvre méditerranéenne familiale (FMF), laquelle ou lesquelles est ou sont juste(s).",
+          "options": [
+            "La FMF est due à une mutation dans le gène MEFV se traduisant par une hypersécrétion de la cytokine pro-inflammatoire interleukine 6",
+            "Les accès fébriles au cours de la FMF durent jusqu'à trois jours",
+            "Le péricarde est la séreuse la plus rarement touchée par le processus inflammatoire",
+            "La colchicine est prescrite aux moments clés des accès fébriles de la FMF"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "9. Maladies rares": {
+      "​2026": [
+        {
+          "question": "Cochez la ou les proposition(s) juste(s). Les maladies rares présentent les caractéristiques suivantes:",
+          "options": [
+            "La moitié des maladies rares sont d'origine génétique",
+            "Les maladies orphelines sont des maladies rares pour lesquelles existe un traitement spécifique",
+            "La grande majorité des maladies rares ont uniquement un traitement symptomatique",
+            "La maladie de Fabry est une maladie rare lysosomale pour laquelle existe un traitement spécifique"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) fausse(s). Les maladies de surcharge lysosomales présentent les caractéristiques suivantes:",
+          "options": [
+            "Les formes qui apparaissent à l'enfance, sont de mauvais pronostique",
+            "Le dysfonctionnement lysosomal est dû au seul déficit d'une enzyme lysosomale",
+            "Le diagnostic positif repose sur dosage de la concentration plasmatique de l'enzyme déficitaire",
+            "Le traitement fait appel principalement à la substitution par voie IV de l'enzyme déficitaire"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Cochez la ou les proposition(s) fausse(s)",
+          "options": [
+            "Les maladies orphelines sont des maladies rares pour lesquelles il n'existe pas un traitement spécifique",
+            "Les douleurs chroniques sont les principaux signes cliniques des maladies rares",
+            "Les maladies de surcharge lysosomale sont dues à des mutations d'un ou plusieurs gènes",
+            "Les maladies de surcharge lysosomale évoluent sur un mode chronique chez l'adulte"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) fausse(s)",
+          "options": [
+            "Les maladies orphelines sont des maladies rares pour lesquelles il existe un traitement spécifique",
+            "Les médicaments orphelins ne sont disponibles que pour 5% des maladies rares",
+            "La perte d'autonomie est la principale cause de l'altération de qualité de vie au cours des maladies rares",
+            "La maladie de Gaucher est une maladie rare lysosomale pour laquelle il n'existe pas encore de traitement spécifique"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Les maladies de surcharge lysosomales présentent les caractéristiques suivantes :",
+          "options": [
+            "Les formes qui apparaissent à l'âge adulte sont les moins sévères",
+            "Le dysfonctionnement lysosomal est toujours lié à un déficit d'une enzyme lysosomale",
+            "La maladie de Gaucher est parmi la plupart des maladies de surcharge lysosomale pour lesquelles il n'existe pas encore de traitement spécifique",
+            "Le tableau clinique est dominé par les signes neurologiques"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Les maladies rares présentent les caractéristiques suivantes: Cocher la ou les propositions juste(s)",
+          "options": [
+            "L'errance diagnostique lors des maladies rares est en moyenne de 4 ans",
+            "La moitié des maladies rares sont d'origine génétique",
+            "Les médicaments orphelins ne sont disponibles que pour 5% des maladies rares",
+            "La perte d'autonomie est la principale cause de l'altération de qualité de vie"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "10. Myopathies inflammatoires": {
+      "​2026": [
+        {
+          "question": "A propos de syndrome des antisynthétases :",
+          "options": [
+            "Il s'agit d'une myopathie congénitale",
+            "Caractérisé par la positivité des anticorps MDA5",
+            "Un phénomène de Raynaud peut être présent",
+            "Le signe de Gouttron est pathognomonique"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Les manifestations biologiques des myopathies inflammatoires sont :",
+          "options": [
+            "Augmentation des taux de CPK et LDH",
+            "Syndrome inflammatoire obligatoire",
+            "Augmentation des taux de TGP",
+            "Hyperleucocytose"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "A propos de la polymyosite : cochez la ou les réponses justes",
+          "options": [
+            "L'érythème du visage est fréquent",
+            "Association constante avec un cancer",
+            "Les CPK et LDH sont élevés",
+            "La biopsie musculaire montre une micro-angiopathie"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "La dermatomyosite chez l'enfant est caractérisée par : cochez la ou les réponses justes",
+          "options": [
+            "La prédominance des signes cutanés qui sont au premier plan",
+            "L'apparition de calcifications intra-musculaires",
+            "L'absence toujours de réaction inflammatoire",
+            "Résistance aux corticoïdes"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "A propos de syndrome des antisynthétases",
+          "options": [
+            "Il s'agit d'une myopathie congénitale",
+            "Caractérisé par la positivité des anticorps MDA5",
+            "Un phénomène de Raynaud peut être présent",
+            "Le signe de Gouttron est pathognomonique"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "La microangiopathie est caractéristique de",
+          "options": [
+            "Myosite à inclusion",
+            "Myopathies endocriniennes",
+            "Dermatomyosite",
+            "Polymyosite."
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "La myopathie à inclusion",
+          "options": [
+            "Touche les enfants",
+            "Caractérisé par la présence d'Ac antinucléaires",
+            "S'accompagne toujours d'un cancer",
+            "Elle ne comporte pas de lésions cutanées"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "A propos de syndrome des anti synthétases",
+          "options": [
+            "Il s'agit d'une myopathie inflammatoire",
+            "caractérisé par la positivité des anticorps anti M2",
+            "présence des lésions cutanées à type de mains de mécanicien",
+            "Peut se compliquer d'une atteinte pulmonaire"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "A propos de syndrome des anti synthétases",
+          "options": [
+            "Il s'agit d'une myopathie inflammatoire",
+            "caractérisé par la positivité des anticorps anti M2",
+            "présence des lésions cutanées à type de mains de mécanicien",
+            "Peut se compliquer d'une atteinte pulmonaire"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Au cours des myopathies inflammatoires, la pneumopathie interstitielle se voit dans:",
+          "options": [
+            "Syndrome des anti synthétases",
+            "Myosite à inclusion",
+            "Dermymyosite",
+            "Syndrome de chevauchement"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "Les manifestations biologiques des myopathies inflammatoires sont",
+          "options": [
+            "Augmentation des taux des CPK et LDH",
+            "Syndrome inflammatoire obligatoire?",
+            "Augmentation du taux des TGP",
+            "Hyperleucocytose"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "Parmi les propositions suivantes, quelles sont les caractéristiques des myopathies inflammatoires",
+          "options": [
+            "Déficit musculaire des ceintures",
+            "Atteinte pulmonaire constante",
+            "Syndrome inflammatoire constant",
+            "Une élévation des enzymes musculaires"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les signes cutanés suivants quels sont les signes caractéristiques de la dermatomyosite:",
+          "options": [
+            "Erythroedeme des paupières",
+            "Papules de Gouttron",
+            "Photosensibilité?",
+            "Mains de mécaniciens"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Parmi les signes cutanés suivants quels sont les signes caractéristiques de la dermatomyosite:",
+          "options": [
+            "Erythroedeme des paupières",
+            "papules de Gouttron",
+            "photosensibilité",
+            "Mains de mécaniciens"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Quelles sont les caractéristiques des myopathies inflammatoires:",
+          "options": [
+            "Déficit musculaire proximal",
+            "Déficit musculaire distal",
+            "Syndrome inflammatoire constant",
+            "Une élévation des enzymes musculaires"
+          ],
+          "correct_option_ids": [
+            0,
+            3
+          ]
+        },
+        {
+          "question": "Quelles sont les myopathies inflammatoires qui peuvent s'accompagner d'un cancer:",
+          "options": [
+            "Dermatomyosite",
+            "Syndrome des antisynthétases",
+            "Myosite à inclusion",
+            "Myosite de chevauchement"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Quelles sont les myopathies inflammatoires qui peuvent s'accompagner d'un cancer:",
+          "options": [
+            "Myosite de chevauchement",
+            "Syndrome des antisynthétases",
+            "Myosite à inclusion",
+            "Dermatomyosite"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Quels sont les signes cutanés caractéristiques de la dermatomyosite:",
+          "options": [
+            "érythème malaire",
+            "sclerodactylie",
+            "Nodules rhumatoïdes",
+            "Lupus discoïde"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        }
+      ]
+    },
+    "11. Principes du traitement et suivi des maladies systémiques": {
+      "​2026": [
+        {
+          "question": "Concernant l'impact des fortes doses de corticoïdes sur l'équilibre glycémique, laquelle(s) de ces affirmations est/sont correcte(s) ?",
+          "options": [
+            "Elles augmentent le risque d'hyperglycémie",
+            "Elles nécessitent une adaptation du traitement du diabète",
+            "Elles imposent une surveillance glycémique rapprochée",
+            "Leur principal risque glycémique est l'hypoglycémie"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Concernant le mycophénolate mofétil (MMF) chez une femme en âge de procréer, laquelle de ces affirmations est exacte ?",
+          "options": [
+            "Il est compatible avec une grossesse",
+            "Il est fortement tératogène",
+            "Il impose une contraception efficace obligatoire pendant le traitement",
+            "Un relais par l'azathioprine est possible si projet de grossesse"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Au cours de la Biothérapies par anti-TNF : Quelles affirmations sont correctes?",
+          "options": [
+            "Risque de réactivation de la tuberculose.",
+            "Lupus médicamenteux possible (Ac anti-ADN positifs).",
+            "L'effet n'est généralement visible qu'après plusieurs semaines.",
+            "Vaccination antipneumococcique, grippe, HBV, etc"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Au cours de la Corticothérapie prolongée: Quelle: propositions sont exactes?",
+          "options": [
+            "Risque reconnu, surtout chez les jeunes.",
+            "Effet classique : leucocytose par démargination de neutrophiles.",
+            "Le calcium suffit seul à prévenir l'ostéoporose.",
+            "Syndrome de sevrage (hypotension, asthénie, fièvre)."
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Quel est l'effet principal des glucocorticoïdes?",
+          "options": [
+            "Effet anti-inflammatoire et immunosuppresseur",
+            "Stimulation de la croissance musculaire",
+            "Augmentation de la diurèse",
+            "Réduction de la glycémie"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "Quelle est la principale différence entre un immunosuppresseur et un immunomodulateur?",
+          "options": [
+            "L'immunosuppresseur stimule le système immunitaire alors que l'immunomodulateur l'inhibe",
+            "L'immunosuppresseur inhibe globalement l'immunité, alors que l'immunomodulateur régule l'activité immunitaire",
+            "L'immunomodulateur est toujours utilisé en cas de greffe d'organe, contrairement à l'immunosuppresseur",
+            "Il n'y a pas de réelle différence entre les deux"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Cocher la ou les proposition(s) fausse(s)",
+          "options": [
+            "Une corticothérapie à forte dose est prescrite à la posologie de 1mg/kg/jour",
+            "Une corticothérapie prolongée est prescrite depuis plus de 3 mois",
+            "Les bolus intraveineux de méthyl prednisolone sont prescrit à la posologie de 15 mg/kg",
+            "L'azathioprine et le méthotrexate ne sont pas contre-indiqués au cours de la grossesse"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Cocher la ou les proposition(s) juste",
+          "options": [
+            "Le méthotrexate est un immunosuppresseur indiqué dans le traitement des atteintes articulaires des maladies systémiques",
+            "Une dose cumulée élevée de cyclophosphamide expose au risque de stérilité",
+            "Le rituximab anticorps monoclonal dirigé contre une protéine membranaire CD20 des lymphocytes T",
+            "L'infliximab est un anti-TNFa efficace dans le traitement des néphropathies lupiques sévères"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Cochez la ou les proposition(s) juste(s)",
+          "options": [
+            "L'hydroxychloroquine efficace sur les arthralgies, est prescrit au moment des poussées du LES",
+            "L'azothioprine est l'immunosuppresseur autorisé lors de la grossesse chez la femme lupique",
+            "Les AVK sont indiqués chez les lupiques en prophylaxie des thromboses en cas de présence d'anticorps anti phospholipides",
+            "Les bolus IV de méthyl prédnisone sont indiqués en cas de myocardite lupique"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "12. Sclérodermie systémique": {
+      "​2026": [
+        {
+          "question": "Quelle(s) sont les réponse(s) fausse (s) parmi les suivantes au cours de la sclérodermie systémique ?",
+          "options": [
+            "la crise rénale sclérodermique associe une hypertension artérielle de novo souvent sévère, insuffisance rénale aigue anémie hémolytique microangiopathique",
+            "la présence d'anticorps anti ARN polymérase III augmente le risque de crise rénale sclérodermique",
+            "les anticorps anti topoisomérase sont plus fréquemment liés aux formes cutanées limitées et à la présence d'une pneumopathie interstitielle diffuse",
+            "L'atteinte pulmonaire est très souvent inaugurale"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Concernant les différentes formes cutanées de sclerodermie, quelles réponses sont fausses?",
+          "options": [
+            "anticorps anti centromère sont plus fréquemment liés aux formes cutanées diffuses",
+            "un patient atteint d'une forme cutanée diffuse a souvent des anticorps anti-topoisomérase positifs.",
+            "l'HTAP se rencontre le plus souvent dans la forme cutanée diffuse",
+            "la sclérose cutanée est toujours le premier signe de la maladie"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Les principales atteintes Viscérales les plus sévères dans la sclérodermie systémique sont :",
+          "options": [
+            "la crise rénale sclerodermique",
+            "l'atteinte digestive",
+            "l'atteinte articulaire",
+            "la pneumopathie interstitielle diffuse"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "question": "quelle(s) sont les réponse(s) fausse (s) par suivantes au cours de la sclérodermie systémique",
+          "options": [
+            "les anticorps anti topoisomérase sont plus fréquemment associés aux formes cutanées diffuses et à la présence d'une hypertension artérielle pulsatile",
+            "il n'existe pas des cas pédiatrique de la sclérodermie systémique",
+            "l'existence d'un syndrome de Raynaud évoluant depuis plusieurs années au diagnostic est de mauvais pronostic",
+            "la sclérose cutanée est toujours le premier signe de la maladie"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quelles sont les réponses fausses parmi les suivantes au cours de la sclérodermie systémique?",
+          "options": [
+            "la sclérodermie systémique est une connectivite à prédominance féminine",
+            "il n'existe pas des cas pédiatrique de la sclérodermie systémique",
+            "l'existence d'un syndrome de Raynaud évoluant depuis plusieurs années au diagnostic est un synonyme de mauvais pronostic",
+            "la forme cutanée diffuse est la forme la plus fréquente"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quelles sont les réponses justes parmi les suivantes au cours de la sclérodermie systémique?",
+          "options": [
+            "la crise rénale sclérodermique associe une hypertension artérielle de novo souvent sévère, insuffisance rénale aigue et anémie hémolytique microangiopathique",
+            "l'HTAP se rencontre le plus souvent dans la forme cutanée diffuse",
+            "la présence d'anticorps anti ARN polymérase III augmente le risque de crise rénale sclérodermique",
+            "les anticorps anti topoisomérase sont plus fréquemment aux formes cutanées limitées et à la présence d'une pneumopathie interstitielle diffuse."
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "question": "Quels sont les auto-anticorps les plus fréquents dans la sclérodermie systémique, utilisés comme critères positifs de diagnostic ?",
+          "options": [
+            "Ac anti topoisomerase I",
+            "Ac anti SSB",
+            "Ac anti ARN polymerase III",
+            "Ac anti DNA"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Concernant les différents formes cutanées de sclérodermie, quelles réponses sont justes?",
+          "options": [
+            "les anticorps anti centromère sont plus fréquemment associés aux formes cutanée limitée",
+            "un patient atteint d'une forme cutanée diffuse a nécessairement des anticorps anti-topoisomérase positifs.",
+            "les anticorps anti-ARN pol III sont plus fréquemment associés à la survenue d'une crise rénale sclérodermique",
+            "les anticorps anti topoisomérase sont plus fréquemment associés aux formes cutanées diffuses et à la présence d'une pneumopathie interstitielle diffuse."
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Dans la sclérodermie systémique, quelles sont les réponses fausses?",
+          "options": [
+            "HTAP ne se rencontre que dans la forme cutanée diffuse",
+            "L'atteinte pulmonaire est très souvent inaugurale",
+            "la forme cutanée diffuse est la forme la plus fréquente.",
+            "l'existence d'un syndrome de Raynaud évoluant depuis plusieurs années au diagnostic est un synonyme de mauvais pronostic"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Les principales atteintes viscérales les plus sévères dans la sclérodermie systémique sont:",
+          "options": [
+            "crise rénale sclérodermique",
+            "l'atteinte digestive",
+            "l'Hypertension artérielle pulmonaire",
+            "la pneumopathie interstitielle diffuse"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Parmi les atteintes suivantes, lesquelles peuvent être retrouver classiquement en cas de sclérodermie systémique",
+          "options": [
+            "Reflux gastro-oesophagien",
+            "Hypertension artérielle pulmonaire",
+            "Glomérulonéphrite rapidement progressive",
+            "Atteintes des axes vasculaires intracrâniens"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Quelles sont les principales complications pulmonaires associées à la sclérodermie systémique?",
+          "options": [
+            "Fibrose pulmonaire interstitielle",
+            "Pleurésie",
+            "Hypertension artérielle pulmonaire",
+            "Embolie pulmonaire"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "question": "Quelles sont les réponses fausses parmi les suivantes au cours de la sclérodermie systémique?",
+          "options": [
+            "la sclérodermie systémique est une connectivite à prédominance masculine",
+            "Il n'existe pas des cas pédiatrique de la sclérodermie systémique",
+            "l'existence d'un syndrome de Raynaud évoluant depuis plusieurs années au diagnostic est un synonyme de Mauvais pronostic",
+            "la forme cutanée limitée est la forme la plus fréquente."
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Quelles sont les réponses justes parmi les suivantes aut cours de la sclérodermie systémique ?",
+          "options": [
+            "la sclérodermie systémique survient généralement sur un terrain auto-immun prédisposant.",
+            "la sclerodermie systémique est une connectivite à prédominance féminine.",
+            "Il existe des cas pédiatrique de la sclérodermie systémique",
+            "l'âge moyen au diagnostic est généralement 25 ans."
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Quels sont les auto-anticorps les plus fréquents dans la sclérodermie systémique, utilisés comme critères positifs de diagnostic?",
+          "options": [
+            "Anti-scl 70",
+            "Anti-DNA natif",
+            "Anti-topoisomerase",
+            "Anti-centromère"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quels sont les auto-anticorps les plus fréquents dans la sclérodermie systémique, utilisés comme critères positifs de diagnostic?",
+          "options": [
+            "Ac anti topoisomérase I",
+            "Ac anti SSA",
+            "Ac anti ARN polymérase III",
+            "Ac anti CCP"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "13. Syndrome des antiphospholipides": {
+      "​2026": [
+        {
+          "question": "Concernant le syndrome des antiphospholipides, quelle(s) proposition(s) est/sont exacte(s) ?",
+          "options": [
+            "Il associe des manifestations thrombotiques et/ou obstétricales à la présence d'anticorps antiphospholipides persistants",
+            "Les anticorps à rechercher sont l'anticardiolipine, l'anti-B2 glycoprotéine I et l'anticoagulant lupique",
+            "Les anticorps doivent être positifs sur deux prélèvements à au moins 3 semaines d'intervalle",
+            "Le SAPL ne peut jamais être associé à une autre connectivite"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "À propos de la prise en charge thérapeutique du SAPL, quelle(s) proposition(s) est/sont exacte(s)?",
+          "options": [
+            "Le traitement curatif d'une thrombose repose sur les AVK au long cours",
+            "L'INR cible est de 2-3 pour les formes veineuses",
+            "En cas de SAPL obstétrical, l'HBPM préventive est indiquée pendant la grossesse",
+            "Les AOD (anticoagulants oraux directs) sont préférés aux AVK."
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Concernant les manifestations cliniques du SAPL quelles affirmation sont-elles vraies?",
+          "options": [
+            "Entraine surtout une atteinte cutanée appelée livédo réticularis",
+            "Il est une cause fréquente d'AVC chez le sujet jeune",
+            "Il se manifeste par des thromboses micro-vasculaire uniquement",
+            "Parmi les anticorps spécifiques du SAPL sont les anticorps anticardiolipines"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Le SAPL catastrophique est une forme sévère de la maladie, quels sont ses critères ?",
+          "options": [
+            "Les immunoglobulines parfois figurent parmi les options thérapeutique",
+            "Présence d'anticorps anti-phospholipides",
+            "Thromboses multiples et défaillance multi-viscérales atteignant au moins trois organes",
+            "Installation rapide en quelques jours"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Quelles complications obstétricales caractéristiques du SAPL?",
+          "options": [
+            "Prééclampsie sévère",
+            "Fausse couche tardive",
+            "Accouchement prématuré sans cause identifié",
+            "Malformation fœtale"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Quelles sont les principaux traitements du SAPL?",
+          "options": [
+            "Corticothérapie prolongée",
+            "Immunosuppresseurs systématiques",
+            "Anticoagulation par AVK",
+            "Anti agrégation plaquettaire"
+          ],
+          "correct_option_ids": [
+            0,
+            2,
+            3
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Au cours d'un SAPL obstétrical: quelles sont les propositions justes?",
+          "options": [
+            "Le traitement repose sur anticoagulation au long",
+            "Une HBPM à titre préventif est préconisé dans les situations à risque de thrombose",
+            "Les manifestations thrombo-emboliques sont senles",
+            "dehors d'une grossesse un traitement par ASIRINE à titre préventif est proposé"
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "Au cours du SAPL",
+          "options": [
+            "Le critère diagnostique majeur est la présence d'anticorps anti phospholipides dans le sang",
+            "La PEC des patients atteints de SAPL présentant une thrombose veineuse profonde se fait par anticoagulants pendant au moins trois mois",
+            "Les fausses couches récurrentes sont parmi les critères diagnostiques",
+            "Le traitement par corticoïde est nécessaire au cours du CAPS"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Au cours du syndrome catastrophique des anticorps anti phospholipides Quelles sont les positions vraies?",
+          "options": [
+            "défaillance multi-viscérale est liée à une angiopathie thrombotique",
+            "Il survient aussi bien au cours du SAPL primaire que du lupus",
+            "Les corticoïdes et les héparines sont seuls les traitements d'urgence",
+            "Les manifestations de ce syndrome concernent deux organes atteints simultanément"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Le traitement d'un SAPL obstétrical en dehors de la grossesse repose sur :",
+          "options": [
+            "L'anticoagulation par anticoagulant oraux direct",
+            "L'anticoagulation par héparine",
+            "L'anti agrégation plaquettaire",
+            "Le traitement par acenocoumarol"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Quelles sont les manifestations obstétricales pouvant être associées au SAPL?",
+          "options": [
+            "La naissance prématurée avant 34 SA",
+            "prééclampsie",
+            "Le HELLP syndrome",
+            "Au moins une fausse couche avant 10 SA"
+          ],
+          "correct_option_ids": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Quelles sont les manifestations obstétricales pouvant être associées au SAPL?",
+          "options": [
+            "Au moins une fausse couche avant 10 SA",
+            "Placenta praevia",
+            "La prééclampsie",
+            "Le HELLP syndrome"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "14. Vascularites": {
+      "​2026": [
+        {
+          "question": "Quelles sont les caractéristiques de la granulomatose éosinophilique avec polyangéite ?",
+          "options": [
+            "Asthme réfractaire",
+            "Éosinophilie sanguine",
+            "Asymétrie des pouls",
+            "Aphthes buccales"
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, quelle est la vascularite qui peut s'accompagner d'atteinte de la sphère ORL ?",
+          "options": [
+            "Granulomatose avec polyangéite",
+            "Périartérite noueuse",
+            "Artérite à cellules géantes",
+            "Vascularite cryoglobulinémique"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Dans la maladie de Kawasaki la gravité de l'atteinte vasculaire est essentiellement celle de, cocher la bonne réponse",
+          "options": [
+            "De l'artère rénale.",
+            "De l'aorte.",
+            "Des Artères coronaires.",
+            "Aucune réponse n'est juste"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez la réponse fausse) :",
+          "options": [
+            "Est le principal déterminant du pronostic à long terme.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome néphrotique.",
+            "La PBR est systématique."
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelle est l'atteinte la plus fréquente, cocher la bonne réponse:",
+          "options": [
+            "Atteinte articulaire.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, tous ces atteintes sont retrouvées sauf une laquelle :",
+          "options": [
+            "Atteinte cérébrale.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "L'évaluation sur le long terme du purpura rhumatoïde chez l'enfant comprend de manière systématique :",
+          "options": [
+            "Une échographie abdominale.",
+            "Une mesure de la TA.",
+            "Une fibroscopie digestive haute.",
+            "Un bilan urinaire."
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche essentiellement (cochez les bonnes réponses) :",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseau.",
+            "Les Enfants de 6 mois à 5 ans",
+            "Les filles"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Lors d'une consultation de suivi chez une adolescente de 18 ans, l'évaluation médicale est sans particularité, à l'exception de l'incapacité à percevoir le pouls et à relever la pression artérielle au niveau du bras gauche à quelle vascularite pensez ?",
+          "options": [
+            "Maladie de Horton",
+            "Maladie de Kawazaki",
+            "Maladie Takayasu",
+            "Maladie de Behçet"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Lors d'une consultation de suivi chez une adolescente de 18 ans, l'évaluation médicale est sans particularité, à l'exception de l'incapacité à percevoir le pouls et à relever la pression artérielle au niveau du bras gauche, à quelle vascularite vous pensez ?",
+          "options": [
+            "Maladie de Horton",
+            "Maladie de Kawazaki",
+            "Maladie Takayasu",
+            "Maladie de Behçet"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, Quelle est la vascularite qui peut s'accompagner d'un asthme tardif ?",
+          "options": [
+            "Granulomatose avec polyangéite",
+            "Granulomatose éosinophilique avec polyangéite",
+            "Vascularite cryoglobulinémique",
+            "Artérite à cellules géantes"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Dans la maladie de Kawasaki, le traitement de révérence de première intention est (cochez la bonne réponse):",
+          "options": [
+            "Perfusion intraveineuse d'immunoglobulines (IgV) Polyvalentes à la dose de 2 g/kg administrée en une seule fois et associée à de l'aspirine.",
+            "Boulus de corticoïdes.",
+            "Aspirine seule.",
+            "Infliximab."
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte digestive (cochez les réponses fausses):",
+          "options": [
+            "Est à craindre à long terme.",
+            "Nécessite une corticothérapie systémique.",
+            "Peut nécessiter une intervention chirurgicale.",
+            "Nécessite un régime alimentaire adapté."
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte digestive:",
+          "options": [
+            "Est à craindre à long terme",
+            "Nécessite une corticothérapie systémique",
+            "Peut nécessiter une intervention chirurgicale",
+            "Nécessite un régime alimentaire adapté"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez la réponse fausse):",
+          "options": [
+            "Est le principal déterminant du pronostic à long terme.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome néphrotique.",
+            "La PBR est systématique."
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez les réponses justes):",
+          "options": [
+            "La PBR est systématique.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome NEphrotique.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Est le principal déterminant du pronostic à long terme."
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelles sont les atteintes les moins redoutables (cochez les bonnes réponses):",
+          "options": [
+            "Atteinte articulaire.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelles sont les atteintes les plus redoutables: Cochez les bonnes réponses",
+          "options": [
+            "Atteinte articulaire",
+            "Atteinte cutanée",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "L'évaluation sur le long terme du purpura rhumatoïde chez l'enfant comprend de manière systématique :",
+          "options": [
+            "Une échographie abdominale.",
+            "Une mesure de la TA.",
+            "Une fibroscopie digestive haute.",
+            "Un bilan urinaire."
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Behçet est une vascularite systémique touchant:",
+          "options": [
+            "Les gros vaisseaux",
+            "Les petits vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Toutes les réponses sont justes"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche essentiellement (cochez les bonnes réponses):",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Les Enfants de 6 mois à 5 ans.",
+            "Les filles."
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche principalement (cochez les fausses réponses):",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Les Enfants plus de 05 ans.",
+            "Les garçons"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "question": "Lors d'un examen de routine, chez une jeune fille de 16 ans, originaire d'Annaba, l'examen clinique est normal en dehors d'un pouls et d'une tension artérielle imprenable sur le membre supérieur droit à quelle vascularite vous pensez ?",
+          "options": [
+            "Maladie de Kawazaki",
+            "Maladie Takayasu",
+            "Maladie de Horton",
+            "Maladie de Behçet"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Lors d'une consultation de suivi chez une adolescente de 18 ans, l'évaluation médicale est sans particularité, à l'exception de l'incapacité à percevoir le pouls et à relever la pression artérielle au niveau du bras gauche à quelle vascularite vous pensez ?",
+          "options": [
+            "Maladie de Horton",
+            "Maladie de Kawazaki",
+            "Maladie Takayasu",
+            "Maladie de Behçet"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes deux touchent préférentiellement l'aorte et ses branches, lesquelles :",
+          "options": [
+            "Périartérite noueuse",
+            "Artérite à cellules géantes",
+            "Artérite de Takayasu",
+            "Vascularite avec polyangéite"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes deux touchent préférentiellement l'aorte et ses branches, lesquelles:",
+          "options": [
+            "Périartérite noueuse",
+            "Artérite à cellules géantes",
+            "Artérite de Takayasu",
+            "vascularite avec polyangéite"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, Quelle est la vascularite la plus fréquente après l'âge de 50 ans ?",
+          "options": [
+            "Purpura rhumatoïde",
+            "Artérite à cellules géantes",
+            "Maladie de Behçet",
+            "Vascularite avec polyangéite"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, Quelle est la vascularite qui peut s'accompagner d'atteinte de la sphère ORL?",
+          "options": [
+            "Vascularite cryoglobulinémique",
+            "Artérite à cellules géantes",
+            "Granulomatose avec polyangéite",
+            "Vascularite à IgA"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, Quelle est la vascularite qui peut s'accompagner d'atteinte de la sphère ORL ?",
+          "options": [
+            "Vascularite cryoglobulinémique",
+            "Artérite à cellules géantes",
+            "Granulomatose avec poly angéite",
+            "Vascularite à IgA"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "Parmi les vascularites suivantes, Quelle est la vascularite qui peut s'accompagner d'un asthme tardif?",
+          "options": [
+            "Granulomatose avec polyangéite",
+            "Granulomatose éosinophilique avec polyangéite",
+            "Vascularite cryoglobulinémique",
+            "Artérite à cellules géantes"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "Un homme âgé de 63 ans, asthmatique depuis 3 ans ces dernières semaines son asthme devient difficile à contrôler avec altération de l'état général et polyarthralgie Ce tableau évoque une vascularite, laquelle",
+          "options": [
+            "Maladie de Horton",
+            "Périartérite noueuse",
+            "Granulomatose avec polyangéite",
+            "Granulomatose eosinophilique avec polyangéite"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "Un homme de 72 ans présente depuis 2 mois des céphalées temporales persistantes, une fatigue générale et une perte d'appétit. L'examen clinique révèle une sensibilité marquée du muscle temporal à la palpation et une diminution du pouls temporal gauche. VS élevée et une CRP augmentée. à quelle vascularite vous pensez ?",
+          "options": [
+            "Artérite à cellules géantes",
+            "Maladie Takayasu",
+            "Granulomatose avec polyangéite",
+            "Maladie de Behçet"
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "un jeune homme de 25 ans aux antécédents d'aphtose buccale récidivante depuis deux ans, se présente à la consultation d'ophtalmologie pour un œil rouge, ce tableau fait évoquer une vascularite, le?",
+          "options": [
+            "vascularite à IgA",
+            "Artérite de Takayasu",
+            "Maladie de Behçet",
+            "Maladie de Kawasaki."
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        }
+      ]
+    },
+    "15. Vascularites pédiatriques": {
+      "​2026": [
+        {
+          "question": "Le diagnostic du purpura rhumatoïde chez l'enfant repose sur la présence obligatoire de ce critère majeur, cochez la réponse juste:",
+          "options": [
+            "Atteinte articulaire",
+            "Atteinte cutanée",
+            "Atteinte digestive",
+            "Atteinte rénale"
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cocher les réponses justes) :",
+          "options": [
+            "Est le principal déterminant du pronostic à court terme",
+            "Se manifeste entre le troisième jour du diagnostic et le troisième mois",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome néphrotique",
+            "La PBR est indiquée en cas de néphrite rapidement progressive ou d'insuffisance rénale"
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "Critères internationaux du diagnostic de la maladie de Kawasaki (cocher la réponse fausse) :",
+          "options": [
+            "Éruption cutanée polymorphe",
+            "Hyperhémie conjonctivale aiguë non purulente, bilatérale",
+            "Énanthème des lèvres et de l'ensemble de la cavité buccale",
+            "Absence de fièvre"
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        }
+      ],
+      "​2025": [
+        {
+          "question": "Dans la maladie de Kawasaki la gravité de l'atteinte vasculaire est essentiellement celle de, cocher la bonne réponse",
+          "options": [
+            "De l'artère rénale.",
+            "De l'aorte.",
+            "Des Artères coronaires.",
+            "Aucune réponse n'est juste"
+          ],
+          "correct_option_ids": [
+            2
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez la réponse fausse) :",
+          "options": [
+            "Est le principal déterminant du pronostic à long terme.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome néphrotique.",
+            "La PBR est systématique."
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelle est l'atteinte la plus fréquente, cocher la bonne réponse:",
+          "options": [
+            "Atteinte articulaire.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, tous ces atteintes sont retrouvées sauf une laquelle :",
+          "options": [
+            "Atteinte cérébrale.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "L'évaluation sur le long terme du purpura rhumatoïde chez l'enfant comprend de manière systématique :",
+          "options": [
+            "Une échographie abdominale.",
+            "Une mesure de la TA.",
+            "Une fibroscopie digestive haute.",
+            "Un bilan urinaire."
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche essentiellement (cochez les bonnes réponses) :",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseau.",
+            "Les Enfants de 6 mois à 5 ans",
+            "Les filles"
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "​2024": [
+        {
+          "question": "Dans la maladie de Kawasaki, le traitement de révérence de première intention est (cochez la bonne réponse):",
+          "options": [
+            "Perfusion intraveineuse d'immunoglobulines (IgV) Polyvalentes à la dose de 2 g/kg administrée en une seule fois et associée à de l'aspirine.",
+            "Boulus de corticoïdes.",
+            "Aspirine seule.",
+            "Infliximab."
+          ],
+          "correct_option_ids": [
+            0
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte digestive (cochez les réponses fausses):",
+          "options": [
+            "Est à craindre à long terme.",
+            "Nécessite une corticothérapie systémique.",
+            "Peut nécessiter une intervention chirurgicale.",
+            "Nécessite un régime alimentaire adapté."
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte digestive:",
+          "options": [
+            "Est à craindre à long terme",
+            "Nécessite une corticothérapie systémique",
+            "Peut nécessiter une intervention chirurgicale",
+            "Nécessite un régime alimentaire adapté"
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez la réponse fausse):",
+          "options": [
+            "Est le principal déterminant du pronostic à long terme.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome néphrotique.",
+            "La PBR est systématique."
+          ],
+          "correct_option_ids": [
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, l'atteinte rénale (cochez les réponses justes):",
+          "options": [
+            "La PBR est systématique.",
+            "Peut se traduire par une hématurie micro ou macroscopique, une protéinurie minime ou un syndrome NEphrotique.",
+            "Se manifeste entre le troisième jour du diagnostic et la première année.",
+            "Est le principal déterminant du pronostic à long terme."
+          ],
+          "correct_option_ids": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelles sont les atteintes les moins redoutables (cochez les bonnes réponses):",
+          "options": [
+            "Atteinte articulaire.",
+            "Atteinte cutanée.",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "question": "En cas de purpura rhumatoïde chez l'enfant, quelles sont les atteintes les plus redoutables: Cochez les bonnes réponses",
+          "options": [
+            "Atteinte articulaire",
+            "Atteinte cutanée",
+            "Atteinte digestive.",
+            "Atteinte rénale."
+          ],
+          "correct_option_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "question": "L'évaluation sur le long terme du purpura rhumatoïde chez l'enfant comprend de manière systématique :",
+          "options": [
+            "Une échographie abdominale.",
+            "Une mesure de la TA.",
+            "Une fibroscopie digestive haute.",
+            "Un bilan urinaire."
+          ],
+          "correct_option_ids": [
+            1,
+            3
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche essentiellement (cochez les bonnes réponses):",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Les Enfants de 6 mois à 5 ans.",
+            "Les filles."
+          ],
+          "correct_option_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "question": "La maladie de Kawasaki touche principalement (cochez les fausses réponses):",
+          "options": [
+            "Les gros vaisseaux.",
+            "Les moyens vaisseaux.",
+            "Les Enfants plus de 05 ans.",
+            "Les garçons"
+          ],
+          "correct_option_ids": [
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  }
+}

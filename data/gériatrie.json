@@ -1,0 +1,963 @@
+{
+  "module": "🧓 Gériatrie",
+  "lessons": {
+    "1. Introduction": {
+      "2026": [
+        {
+          "question": "L'évaluation gériatrique globale (EGG) est: QCS",
+          "options": ["Un pilier des décisions thérapeutiques en Oncologie.", "Un outil multidimensionnel.", "Un regroupement de statuts : social, fonctionnel, cognitif, nutritionnel, psychique et comorbidité.", "Toutes ces réponses sont justes."],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "En gériatrie la prise en charge de la personne âgée relève d'une évaluation globale, il s'agit de trois approches :",
+          "options": ["Médicale", "Psychologique", "Sociale.", "Clinique"],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "La gérontologie est l'étude scientifique du vieillissement, sur divers aspects",
+          "options": ["Sociologique", "Légal", "Economique", "Politique"],
+          "correct_option_ids": [0, 1, 2, 3]
+        },
+        {
+          "question": "La spécificité de la pratique gériatrique réside dans le caractère global de la prise en charge de la personne en tenant compte d'un seul paramètre général, lequel ?",
+          "options": ["Le lourd passé personnel", "La nature de la maladie chronique", "Son état grabataire", "Son environnement"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Le raisonnement gériatrique est une approche médicale globale et multidimensionnelle. Il ne cherche pas à traiter un organe isolé, mais à évaluer le patient dans sa globalité physique, cognitive et sociale. Son but principal est de préserver ou d'améliorer l'autonomie et la qualité de vie. Afin de maitriser ce raisonnement les gériatres ont adopté la méthode uniciste qui se caractérise par 2 approches parmi ce qui suit :",
+          "options": ["Devant toute situation clinique, la démarche médicale de l'interniste recherche une complexité en regroupant les signes en syndromes pour définir une maladie unique.", "En gériatrie, cet effort d'unicité demeure nécessaire, mais l'enquête diagnostique conclut le plus fréquemment à l'existence d'un état poly pathologique.", "Le raisonnement médical traditionnel s'appauvrit, en gériatrie, d'une approche fonctionnelle multisystémique « bio-psychosociale ».", "Il va permettre, par l'évaluation gériatrique standardisée, de proposer au patient une prise en charge multidisciplinaire."],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "La maladie est une altération de la santé. Elle se caractérise par des symptômes physiques ou mentaux perturbant le bon fonctionnement de l'organisme. Elle peut être causée par des agents pathogènes (virus, bactéries), des facteurs génétiques ou environnementaux. La maladie est un processus (QCM) :",
+          "options": ["Sélectif : varie selon l'espèce, le tissu, l'organe ou la cellule, intrinsèque et extrinsèque qui peut dépendre aussi bien des influences environnementales que des facteurs génétiques.", "Continu : susceptible de progression, de régression ou d'arrêt.", "Parfois nuisible à la santé : atteinte plus ou moins grave, plus ou moins réversible.", "Souvent susceptible d'être traitée."],
+          "correct_option_ids": [0, 2, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Le raisonnement gériatrique est une approche destinée pour le sujet âgé, il s'agit d'un concept associant trois éléments; « 1+2+3 de Bouchon » que signifie-t-il:",
+          "options": ["Approche génétique", "Evaluation paraclinique", "Approche clinique", "Stratégie thérapeutique"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Qu'est-ce qu'un vieillissement optimal ?",
+          "options": ["Vieillir avec sans pathologie", "Vieillir avec un minimum de handicapes", "Avoir une comorbidité", "Etre obèse"],
+          "correct_option_ids": [0, 1]
+        }
+      ]
+    },
+    "2. Activité physique et rééducation": {
+      "2026": [
+        {
+          "question": "L'activité physique adaptée peut contribuer à :",
+          "options": ["Réduire la douleur chez certaines personnes", "Améliorer l'autonomie et la qualité de vie", "Améliorer l'état fonctionnel en cas de BPCO", "Toutes ces réponses sont justes"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Le but d'une épreuve fonctionnelle à l'exercice (EFX) est de déterminer (QCS) :",
+          "options": ["La fréquence cardiaque cible nécessaire à l'entraînement.", "La motivation à l'entraînement", "La force musculaire du patient", "L'état nutritionnel du patient"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "L'APA est une activité physique adaptée aux capacités des personnes : QCS",
+          "options": ["Ayant des besoins spécifiques", "Ayant un mode de vie actif", "En situation de handicap physique localisé", "Âgées"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "L'APA est recommandée pour : cochez la réponse fausse",
+          "options": ["Les personnes jeunes", "Les personnes atteintes de maladies chroniques", "Les sujets âgés", "Les BPCO après une exacerbation"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Quels sont les objectifs de l'APA ? Cochez la réponse fausse",
+          "options": ["Améliorer la condition physique et le bien-être des participants", "Améliorer la qualité de vie des participants", "Améliorer les limitations physiques des participants", "Remplacer les traitements médicaux"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Parmi ces maladies, laquelle nécessite un programme d'APA ? cochez la réponse fausse",
+          "options": ["BPCO", "Maladies cardiovasculaires", "Diabète", "Fracture du col du fémur"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Un programme d'APA peut être réalisé ? QCM",
+          "options": ["Dans des centres spécialisés", "En ambulatoire", "A domicile", "Salles de sport"],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "La consultation médicale avant de débuter un programme d'APA comprend : QCM",
+          "options": ["Un examen physique complet, en particulier cardio-vasculaire", "Une évaluation des condition physiques du patient", "Un entretien motivationnel", "La programmation d'une activité physique au patient"],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "Une épreuve fonctionnelle à l'exercice (EFX) doit être réalisée avant le programme de réentraînement. Son but est de déterminer :",
+          "options": ["La fréquence cardiaque cible nécessaire à l'entrainement.", "La motivation à l'entrainement", "La force musculaire du patient", "L'état nutritionnel du patient"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Les séances de réentrainement à l'effort :",
+          "options": ["S'effectuent sur une durée de 120 min", "A la fréquence cardiaque cible", "Sur cycloergomètre ou un tapis roulant", "Sur un mode continu pour obtenir le bénéfice attendu"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "La prise en charge nutritionnelle au cours d'un programme d'activité physique adaptée (Cochez les réponses justes) :",
+          "options": ["Elle est indiquée en fonction de l'état nutritionnel", "Elle est indiquée seulement chez les sujets obèses", "Elle est indiquée seulement chez les sujets dénutris", "Les compléments alimentaires oraux sont toujours prescrits"],
+          "correct_option_ids": [0]
+        }
+      ],
+      "2025": [
+        {
+          "question": "L'APA est recommandée pour :qcs",
+          "options": ["Les personnes en situation de handicap", "Les personnes atteintes de maladies chroniques", "Les sujets âgés", "Toutes ces réponses sont justes"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "L'APA peut contribuer à : qcs",
+          "options": ["Réduire la douleur chez certaines personnes", "Améliorer l'autonomie et la qualité de vie", "Améliorer l'état fonctionnel en cas de BPCO", "Toutes ces réponses sont justes"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Qu'est-ce que l'Activité Physique Adaptée (APA) ? (qcs)",
+          "options": ["Une activité physique réservée aux sujets actifs", "Un entraînement spécifique pour les personnes en situation de handicap", "Un entraînement destiné exclusivement aux personnes âgées", "Une activité physique adaptée aux capacités des personnes ayant des besoins spécifiques"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Quel est l'un des principaux objectifs de l'APA?",
+          "options": ["Améliorer la condition physique et le bien-être des participants", "Favoriser uniquement la performance sportive", "Supprimer les limitations physiques des participants", "Remplacer les traitements médicaux"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Quelle affirmation est vraie concernant l'APA?",
+          "options": ["Elle est identique à la rééducation fonctionnelle", "Elle est prescrite par un médecin dans certains cas", "Elle ne concerne que les jeunes adultes", "Elle est uniquement pratiquée en salle de sport"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quels types d'exercices sont utilisés en APA?",
+          "options": ["Musculation et endurance", "Exercices de souplesse et d'équilibre", "Activités adaptées aux capacités de la personne", "Toutes ces réponses sont justes"],
+          "correct_option_ids": [3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "L'activité physique adaptée (cochez la ou les proposition(s) fausse(s))",
+          "options": ["Est une thérapeutique individualisée", "Le programme est préétabli en fonction de l'âge", "Elle est supervisée par un rééducateur", "Elle est réalisée dans un centre spécialisé", "Elle est réalisée sur une durée de 15 jours"],
+          "correct_option_ids": [1, 2, 4]
+        },
+        {
+          "question": "L'évaluation médicale minimale avant une prescription d'APA (Cochez la ou les réponse(s) fausse(s))",
+          "options": ["Elle est indiquée pour les sujets atteints de pathologies chroniques", "Elle est indiquée pour tous les sujets sédentaires", "Comprend un interrogatoire sur l'histoire médicale", "Elle comprend une estimation de l'état de motivation du patient", "Elle comprend un bilan biologique systématique"],
+          "correct_option_ids": [0, 4]
+        },
+        {
+          "question": "La dysfonction musculaire observée chez les sujets âgés est dû à:",
+          "options": ["La Diminution de la force musculaire", "La Diminution de la masse musculaire", "La diminution du nombre des fibres", "La diminution de la taille des fibres", "Inflammation systémique"],
+          "correct_option_ids": [0, 1, 2, 3]
+        },
+        {
+          "question": "Les facteurs de risque du déclin fonctionnel chez les sujets âgés sont :",
+          "options": ["Les démences", "Les séquelles des accidents vasculaires cérébraux", "Les cancers", "L'incontinence urinaire.", "L'arthrite et les rhumatismes"],
+          "correct_option_ids": [0, 1, 2, 3]
+        },
+        {
+          "question": "OMS recommande : (Cochez la réponse juste)",
+          "options": ["De Faire une activité d'endurance d'intensité soutenue au moins 150 à 300 minutes par semaine", "De pratiquer au moins 75 à 150 minutes d'activité d'endurance modérée par semaine", "De Pratiquer des activités de renforcement musculaire d'intensité modérée 2 fois par semaine", "De limiter l'activité physique chez les sujets âgés", "D'interdire l'activité physique chez les sujets qui présentent des pathologies cardiovasculaires"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Qui dispense un programme d'activités physiques adaptées,",
+          "options": ["Les Kinésithérapeutes", "Les Ergothérapeute", "Le rééducateur physique", "Un enseignant d'APA-S", "Un psychomotricien"],
+          "correct_option_ids": [0, 1, 3, 4]
+        },
+        {
+          "question": "Toutes les propositions suivantes sont justes concernant L'activité physique adaptée sauf une laquelle :",
+          "options": ["Elle permet de réduire la mortalité liée aux maladies cardiovasculaires", "Elle Permet d'améliorer la santé cognitive;", "Elle permet d'améliorer le sommeil ;", "Elle est limitée dans ses indication selon l'âge", "Elle permet de limiter le déclin fonctionnel"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Un programme d'APA(cochez la ou les repose(s) juste(s))",
+          "options": ["Nécessite la réalisation d'abord d'une évaluation clinique", "Une épreuve d'effort n'est pas indiquée", "Il s'étale sur une durée de trois semaines", "L'évaluation des acquis ne se fait qu'à la fin du programme", "Il n'est jamais renouvelé"],
+          "correct_option_ids": [0]
+        }
+      ]
+    },
+    "3. Approche sémiologique": {
+      "2026": [
+        {
+          "question": "La personne âgée se présente habituellement pour une série de décompensations fonctionnelles :",
+          "options": ["Décompensation cérébrale aiguë", "Décompensation sociale", "Décompensation posturale aiguë", "Décompensation sentimentale"],
+          "correct_option_ids": [0, 2]
+        },
+        {
+          "question": "Chez le malade âgé, les symptômes caractéristiques chez le sujet jeune sont souvent atypiques voire absents à savoir : qcm",
+          "options": ["La fièvre est inconstante dans les infections", "Une défense est associée toujours à la contracture abdominale dans les péritonites", "La confusion est souvent la seule manifestation clinique d'une incontinence urinaire ou d'une diarrhée", "Les ronchi peuvent être le seul signe auscultatoire d'un foyer pulmonaire"],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "En matière de consultation en gériatrie, l'approche anamnestique est capitale pour le clinicien, trois éléments sont prioritaires à chaque rencontre",
+          "options": ["Examiner les téguments et les extrémirés", "préciser la raison réelle de son hospitalisation", "dépister et analyser la douleur", "relever les médicaments réellement pris"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "La consultation d'un octogénaire est confronté à des handicapes tel que QCM",
+          "options": ["Hypoacousie", "Baisse de l'acuité visuelle", "Troubles cognitifs", "Agisme"],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "Lors de son stage pratique, nous avons demandé à un étudiant de faire l'examen cardiovasculaire d'une personne octogénaire, il a réussi à faire correctement deux examens parmi les notes suivantes :",
+          "options": ["La présence d'un souffle systolique en écharpe de faible intensité est pathologique et traduit des remaniements aortiques scléreux.", "La mesure de la pression artérielle s'effectue aux 2 bras, en position couchée et debout (recherche d'hypotension orthostatique) avec la mesure du pouls.", "La palpation et l'auscultation de l'aorte abdominale recherchent un anévrisme.", "La taille du coeur peut être évaluée par la palpation xyphoidienne"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Les modifications symptomatiques en gériatrie désignent la manière atypique dont les maladies se manifestent chez les personnes âgées. Contrairement aux adultes jeunes, le patient âgé présente souvent des symptômes trompeurs (confusion, chute, perte d'appétit) ou une \"cascade\" de symptômes masquant la pathologie initiale. La question est posée à un externe, qui a réussi trois fois sur quatre dans sa réponse :",
+          "options": ["L'expression des maladies chez la personne âgée est souvent atypique.", "Les douleurs thoraciques sont absentes dans environ un tiers des infarctus du myocarde.", "L'insuffisance cardiaque se traduit moins par une dyspnée d'effort que par une asthénie ou bien une baisse d'autonomie : le sujet réduit son activité proportionnellement à la réduction de sa capacité fonctionnelle respiratoire.", "D'une façon générale, une maladie s'exprime plus souvent par la décompensation fonctionnelle qu'elle induit sur un organisme vieilli, fragilisé que par une symptomatologie d'organe."],
+          "correct_option_ids": [0, 1, 3]
+        },
+        {
+          "question": "Avec l'âge, la peau devient naturellement plus fine, sèche et fragile, cette évolution est causée par une baisse de collagène, d'élastine et de sébum, ce qui réduit son élasticité, sa capacité à retenir l'eau et favorise l'apparition de rides, de taches pigmentaires et de démangeaisons. Lors de l'examen de la peau d'une personne âgée on vous demande de cocher une erreur produite par l'examinateur :",
+          "options": ["La couleur de la peau, lésions ?", "Le pli cutané est synonyme de déshydratation du fait de l'atrophie des tissus sous-cutanés, sauf s'il est localisé par exemple au sternum ou à la face interne des cuisses.", "L'examen des points de pressions (notamment sacrum et talon) est systématique (escarres).", "La présentation et l'hygiène corporelle sont appréciées (troubles cognitifs et [ou] difficultés ostéoarticulaires ou déficit sensoriel)."],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "La décompensation fonctionnelle est une rupture de l'équilibre chez une personne âgée. Face à une agression (infection, chute, choc émotionnel), l'organisme ne peut plus compenser la baisse de ses réserves, cela entraîne une dépendance brutale (confusion, chute, dénutrition), nécessitant une prise en charge gériatrique rapide. La personne âgée se présente habituellement pour une série de décompensations fonctionnelles :",
+          "options": ["Confusion ou “décompensation cérébrale chronique”", "Dépression ou “décompensation thymique”", "Chute ou “décompensation posturale chronique”", "Décompensation nutritionnelle"],
+          "correct_option_ids": [1, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Les objectifs de l'examen clinique d'une personne âgée sont :",
+          "options": ["Opérer ce qui est curable", "Prévenir ce qui est évitable", "Ralentir ce qu'on ne peut améliorer", "Identifier les maladies patentes et latentes"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "Parmi les propositions suivantes, deux conseils sont valables lors de l'examen clinique gériatrique ?",
+          "options": ["S 'assurer du port des prothèses auditives et de leur fonctionnement (les piles des prothèses ont une durée de vie de 2 à 4 semaines suivant l'utilisation)", "Crier fortement, jouer sur la tonalité de la voix", "Parler hautement, distinctement avec grimaces", "Parler face au patient à une distance qui lui permet de voir les expressions du visage et les mouvements labiaux"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "Parmi les propositions suivantes, quels sont les facteurs intrinsèques qui appuient la théorie du vieillissement?",
+          "options": ["L'hygiène de vie", "L'environnement", "Les gènes", "Le stress oxydatif"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quel est le risque encouru chez la personne âgée ayant perdues ses facultés de perception de soif?",
+          "options": ["La dénutrition", "La déshydratation", "L'hyperhydratation", "Les œdèmes"],
+          "correct_option_ids": [1]
+        }
+      ]
+    },
+    "4. Déshydratation chez le sujet âgé": {
+      "2026": [
+        {
+          "question": "Les causes de la déshydratation chez une personne âgée peuvent être :",
+          "options": ["Hypothermie", "Prise d'un traitement antidiurétique", "Diminution de la sensation de soif", "Chaleur"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Les modifications physiologiques liées au vieillissement rendent l'équilibre homéostatique précaire. Lesquelles ?",
+          "options": ["Diminution de l'eau totale.", "Diminution de la masse rénale et du capital néphrotique", "Altération des sécrétions de rénine, d'aldostérone, de prostacyclines", "Diminution de la masse maigre et de la masse grasse"],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "La déshydratation chez le sujet âgé est (QCS) :",
+          "options": ["Secondaire à une perte excessive ou un défaut d'apport d'eau", "Intracellulaire", "Extracellulaire", "Le plus souvent mixte"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "L'utilisation des diurétiques pour traiter les œdèmes chez le sujet âgé est une prescription (cochez les réponses fausses) :",
+          "options": ["Overuse", "Justifiée", "Misuse", "Qui nécessite un contrôle biologique"],
+          "correct_option_ids": [1, 2, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "La déshydratation chez le sujet âgé est une :",
+          "options": ["Pathologie fréquente et bénigne", "peut avoir des atteintes pluri viscérales", "explique purement par les modifications physiologiques liées à l'âge", "Liée une perte rapide et non compensée d'une grande quantité d'eau et d'électrolytes"],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "La déshydratation chez le sujet âgé est:",
+          "options": ["Intracellulaire", "Extracellulaire", "Le plus souvent mixte", "Secondaire a une perte excessive ou un défaut d'apport de l'eau"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Le mécanismes de L'hypodypsie sont:",
+          "options": ["baisse de faux circulant de l'angiotensine II,", "des 5 récepteurs oropharyngés et hypothalamiques.", "l'anorexie", "Diminution de L'apport hydrique qui provient de l'eau de constitution des aliments."],
+          "correct_option_ids": [0, 1, 2, 3]
+        },
+        {
+          "question": "Les causes de la déshydratation peuvent être ;",
+          "options": ["Diminution de la sensation de soif", "Chaleur", "Hypothermie", "Prises d'un traitement antidiurétique"],
+          "correct_option_ids": [0, 1]
+        },
+        {
+          "question": "les modifications physiologiques liées au vieillissement rendent l'équilibre homéostasique précaire sont :",
+          "options": ["diminution de la masse maigre et la masse grasse", "diminution de l'eau totale.", "Diminution de la masse rénale et du capital néphrotique", "Macération des sécrétions de rénine, d'aldostérone, de prostacyclines"],
+          "correct_option_ids": [1, 2, 3]
+        }
+      ]
+    },
+    "5. Donnée et évolution démographique": {
+      "2026": [
+        {
+          "question": "La pyramide des âges en forme de triangle indique :",
+          "options": ["Une population vieillissante", "Une transition démographique", "Une forte natalité", "Une faible natalité"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Le vieillissement démographique se caractérise principalement par :",
+          "options": ["L'augmentation de la proportion des personnes âgées de 60 ou 65 ans et plus", "La diminution de l'espérance de vie", "La baisse du nombre de personnes âgées au profit des jeunes", "L'augmentation de la natalité"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Le vieillissement par le haut trouve une expression exacte ; laquelle parmi les suivantes :",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie.", "S'observe suite à la diminution de l'espérance de vie."],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle est l'expression correcte concernant le vieillissement par le bas :",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie.", "S'observe suite à la diminution de l'espérance de vie."],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Le vieillissement démographique se caractérise principalement par :QCS",
+          "options": ["L'augmentation de la proportion des personnes âgées de 60 ou 65 ans et plus", "La diminution de l'espérance de vie", "La baisse du nombre de personnes âgées au profit des jeunes", "L'augmentation de la natalité"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "La pyramide des âges en forme de triangle indique :QCS",
+          "options": ["Une population vieillissante", "Une transition démographique", "Une forte natalité", "Une faible natalité"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle est l'expression correcte concernant le vieillissement par le bas :",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie.", "S'observe suite à la diminution de l'espérance de vie."],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est l'expression correcte concernant le vieillissement par le haut :",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie.", "S'observe suite à la diminution de l'espérance de vie."],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "La pyramide des âges en forme de triangle indique :",
+          "options": ["Une population vieillissante", "Une transition démographique", "Une forte natalité", "Une faible natalité"],
+          "correct_option_ids": [2]
+        }
+      ],
+      "2024": [
+        {
+          "question": "La transition démographique a débuté en Algérie dès l'indépendance avec :",
+          "options": ["Une baisse importante de la mortalité", "Une augmentation de la natalité", "Une baisse de la nuptialité", "Un phénomène de récupération après la guerre."],
+          "correct_option_ids": [0, 1, 3]
+        },
+        {
+          "question": "La transition démographique a débuté en Algérie dès l'indépendance avec:",
+          "options": ["Une baisse importante de la mortalité", "Une augmentation de la natalité", "Une baisse de la nuptialité", "Un phénomène de récupération classique observé après la guerre"],
+          "correct_option_ids": [0, 1, 3]
+        },
+        {
+          "question": "Le vieillissement de la population reflète",
+          "options": ["Une amélioration de la santé et des conditions socio-économiques", "Une diminution de la fréquence des maladies chroniques", "Une augmentation du nombre des décès prématurés", "Une baisse du nombre des décès prématurés"],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Le vieillissement de la population reflète :",
+          "options": ["Une amélioration de la santé et des conditions socio-économiques.", "Une diminution de la fréquence des maladies chroniques.", "Une augmentation du nombre des décès prématurés.", "Une baisse du nombre des décès prématurés."],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Parmi les quatre facteurs explicatifs du vieillissement de la population on trouve :",
+          "options": ["Le vieillissement par le haut.", "L'augmentation de la nuptialité.", "augmentation de la fécondité.", "l'héritage des évolutions passées."],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Parmi les quatre facteurs explicatifs du vieillissement de la population on trouve:",
+          "options": ["La baisse de la fécondité", "La baisse de l'espérance de vie.", "L'augmentation de la fécondité", "L'augmentation de l'espérance de vie"],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Quelle est l'expression correcte concernant le vieillissement par le bas :",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie", "S'observe suite à la diminution de l'espérance de vie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est l'expression correcte concernant le vieillissement par le haut:",
+          "options": ["S'observe suite à l'élévation de la fécondité.", "S'observe suite à la diminution de la fécondité.", "S'observe suite à l'augmentation de l'espérance de vie.", "S'observe suite à la diminution de l'espérance de vie."],
+          "correct_option_ids": [2]
+        }
+      ]
+    },
+    "6. Douleur et soins palliatifs": {
+      "2026": [
+        {
+          "question": "Quels sont les outils utiles pour évaluer la douleur en soins palliatifs ?",
+          "options": ["Échelle de Doloplus", "Score APGAR", "Échelle visuelle analogique (EVA)", "Score de Silverman"],
+          "correct_option_ids": [0, 2]
+        },
+        {
+          "question": "Quels sont les principaux objectifs des soins palliatifs en gériatrie ?",
+          "options": ["Guérir la maladie", "Accélérer le processus de mort", "Soulager la douleur et les autres symptômes", "Accompagner le patient atteint d'une maladie grave"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quelles sont les spécificités cliniques d'une douleur chronique chez le sujet âgé ?",
+          "options": ["La douleur aiguë est rare chez les sujets âgés.", "Les douleurs chroniques sont moins fréquentes chez les sujets âgés.", "La douleur chronique chez les sujets âgés peut avoir une expression atypique, masquant d'autres symptômes.", "Les douleurs chroniques sont plus fréquentes chez les sujets âgés."],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quel est l'antalgique de référence chez la personne âgée dans les douleurs sévères ?",
+          "options": ["Codéine", "Tramadol", "Paracétamol", "Morphine"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Quels sont les principes de prise en charge d'un malade en fin de vie et de son entourage ?",
+          "options": ["Traiter la maladie jusqu'à la fin", "Basé sur le soulagement de la douleur et l'écoute des besoins exprimés par le patient", "Limiter les soins pour économiser les ressources", "Se concentrer uniquement sur les besoins physiques du patient"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Quels sont les principaux principes de la prise en charge de la douleur chez les personnes âgées ?",
+          "options": ["Traiter uniquement la cause de la douleur", "Utiliser des médicaments sans se préoccuper des effets secondaires", "Privilégier la voie orale pour l'administration des antalgiques", "Adapter les doses en fonction des besoins du patient et réévaluer régulièrement l'efficacité du traitement"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quels sont les principaux objectifs des soins palliatifs ?",
+          "options": ["Guérir la maladie à tout prix", "Prévenir la survenue de symptômes", "Soulager les symptômes et maintenir le patient aussi valide que possible", "Tous les choix précédents"],
+          "correct_option_ids": [2]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Comment le vieillissement affecte-t-il la douleur?",
+          "options": ["Le vieillissement augmente les seuils douloureux.", "Le vieillissement modifie peu les seuils douloureux,", "la perception est influencée par des facteurs tels que l'anxiété et la dépression.", "Le vieillissement diminue la perception de la douleur."],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "Concernant l'utilisation des AINS (Anti-Inflammatoires Non Stéroïdiens) chez les sujets âgés,",
+          "options": ["Ils sont recommandés sans restriction", "Ils sont contre-indiqués si la clairance de la créatinine est inférieure à 60 ml/min/", "Ils peuvent être administrés à pleine dose sans ajustement", "il faut diminuer les doses de 25 à 50%"],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "Quand les patients sont-ils considérés comme approchant de la fin de vie ?",
+          "options": ["Lorsqu'ils sont susceptibles de mourir dans les six prochains mois", "Lorsqu'ils sont susceptibles de mourir dans les douze prochains mois", "Lorsqu'ils sont atteints d'une maladie incurable", "Lorsqu'ils sont incapables de se déplacer seuls"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quand une douleur est-elle considérée comme chronique ?",
+          "options": ["Lorsqu'elle dure plus de 6 mois", "Lorsqu'elle dure plus de 12 mois", "Lorsqu'elle évolue depuis plus de 3 mois", "Lorsqu'elle est présente depuis la naissance"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quand une douleur est-elle considérée comme chronique, ?",
+          "options": ["Lorsqu'elle persiste pendant plus d'une semaine.", "Lorsqu'elle évolue depuis plus de 3 mois", "Lorsqu'elle est causée par une lésion tissulaire réelle.", "Lorsqu'elle évolue en moins de 3 mois."],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quel est l'antalgique de référence chez la personne âgée dans les douleurs sévères ?",
+          "options": ["Codéine", "Tramadol", "Paracetamol", "Morphine"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Quel est l'effet du vieillissement sur les seuils douloureux provoqués par des stimuli nociceptifs ?",
+          "options": ["Les seuils douloureux diminuent avec l'âge", "Les seuils douloureux augmentent avec l'âge", "Les seuils douloureux ne sont pas affectés par l'âge", "Les seuils douloureux restent constants avec l'âge"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Quel est l'objectif principal des soins palliatifs?",
+          "options": ["Guérir la maladie", "Prolonger la vie à tout prix", "Soulager les douleurs physiques et autres symptômes", "Abstention thérapeutique"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quel est l'objectif principal des soins terminaux ?",
+          "options": ["Retarder le décès", "Accélérer le décès", "Ne hâter ni retarder le décès", "Abstention thérapeutique"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quel médicament n'est plus recommandé chez le sujet âgé en raison de ses effets anticholinergiques?",
+          "options": ["Tramadol", "Codeine", "Nefopam", "Morphine"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle composante de la douleur se réfère à la mémoire, au vécu et aux phénomènes d'attention ou d'interprétation?",
+          "options": ["Composante sensorielle-discriminative", "Composante affective et psychique", "Composante cognitive", "Composante comportementale"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle est l'obligation éthique du médecin envers les patients en fin de vie ?",
+          "options": ["Accélérer le processus de décès si le patient le souhaite", "Assurer le soulagement de la souffrance du malade et accompagner jusqu'à ses derniers moments", "Mettre fin aux traitements dès que le patient est considéré comme en fin de vie", "Ne pas fournir de soins palliatifs aux patients en fin de vie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est la définition des soins palliatifs ?",
+          "options": ["Des soins visant à guérir une maladie grave", "Des soins délivrés dans une approche globale de la personne atteinte d'une maladie grave, évolutive ou terminale", "Des soins visant à prolonger la vie à tout prix", "Des soins délivrés uniquement en institution"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelles sont les étapes psychologiques décrites par E. Kübler-Ross concernant la mort ?",
+          "options": ["Colère, culpabilité, acceptation", "Refus, dénégation, tristesse", "Refus, colère, culpabilité, tristesse, acceptation", "Acceptation, révolte, dépression"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les principales catégories de douleurs fréquemment observées chez les personnes âgées ?",
+          "options": ["Douleurs neuropathiques", "Douleurs musculosquelettiques", "Douleurs chroniques", "Douleurs aigues"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les spécificités cliniques de la douleur chez les sujets âgés ?",
+          "options": ["La douleur aigue est rare chez les sujets âgés.", "Les douleurs chroniques sont moins fréquentes chez les sujets âgés.", "La douleur chronique chez les sujets âgés peut avoir une expression atypique, masquant d'autres symptômes", "Les douleurs chroniques sont, plus fréquentes chez les sujets âgés"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quels sont les principaux facteurs influençant la perception de la douleur chez les personnes âgées ?",
+          "options": ["L'anxiété et la dépression", "Le vieillissement des zones corticales impliquées dans la douleur", "Les expériences douloureuses antérieures", "Tous les choix précédents"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quels sont les principaux objectifs des soins palliatifs ?",
+          "options": ["Guérir la maladie à tout prix", "Prévenir la survenue de symptômes", "Soulager les symptômes et maintenir le patient aussi valide que possible", "Tous les choix précédents"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quels sont les principaux principes de la prise en charge de la douleur chez les personnes âgées ?",
+          "options": ["Traiter uniquement la cause de la douleur", "Utiliser des médicaments sans se préoccuper des effets secondaire", "Privilégier la voie orale pour l'administration des antalgiques", "Adapter les doses en fonction des besoins du patient et réévaluer régulièrement l'efficacité du traitement"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quels sont les principes de prise en charge d'un malade en fin de vie et de son entourage ?",
+          "options": ["Traiter la maladie jusqu'à la fin", "Basé sur le soulagement de la douleur et l'écoute des besoins exprimés par le patient", "Limiter les soins pour économiser les ressource:", "Se concentrer uniquement sur les besoins physiques du patient"],
+          "correct_option_ids": [0]
+        }
+      ]
+    },
+    "7. Fragilité, dépendance et autonomie": {
+      "2026": [
+        {
+          "question": "Concernant les échelles d'évaluation Onco-gériatrique : QCS",
+          "options": ["Le G8 est un outil de dépistage, un score ≥14 indique un besoin d'évaluation gériatrique approfondie (EGA).", "Les échelles ADL et IADL évaluent l'état nutritionnel.", "L'échelle MNA évalue l'état cognitif.", "Toutes ces réponses sont fausses."],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Le Clinical Frailty Socale (CFS) permet : QCM",
+          "options": ["Evaluer la fragilité du sujet âgé.", "Prédire la mortalité et la morbidité.", "Prédire la tolérance aux traitements oncologiques.", "Prédire l'état nutritionnel du sujet âgé."],
+          "correct_option_ids": [0, 1, 2]
+        },
+        {
+          "question": "Quelle(s) réponse(s) est (sont) fausse (s) :QCM",
+          "options": ["L'évaluation du risque de toxicité liée à la chimiothérapie chez le sujet âgé, est principalement évaluée avec le CRASH score.", "L'évaluation du risque de toxicité liée à la chimiothérapie chez le sujet âgé, est principalement évaluée avec le Mini-GDS score.", "Les scores CHARLSON et CIRS-G évaluent directement les comorbidités de la personne âgée.", "Toutes ces réponses sont justes."],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "Le vieillissement de la fonction désigne l'altération progressive et naturelle des capacités physiques, cognitives et physiologiques (sénescence). Dans le domaine de l'administration et des ressources humaines, il fait référence au vieillissement des effectifs de la fonction publique, posant des défis de gestion des âges, qui sont :",
+          "options": ["Le vieillissement est un processus hétérogène variable d'un individu à l'autre et d'un organe à l'autre.", "Il se traduit par une diminution des capacités maximales liée à la réduction des réserves fonctionnelles, responsable d'un état de fragilité (fit elderly).", "D'autres personnes conservent, même dans le grand âge, des capacités fonctionnelles optimales (frail elderly).", "Le déclin des capacités débute dès l'âge adulte et suit une involution progressive."],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "La sous-médicalisation chez le sujet âgé désigne le sous-traitement ou la négligence de maladies évitables, souvent masquée par une banalisation des symptômes du vieillissement, elle engendre une perte d'autonomie accélérée, elle se caractérise par :",
+          "options": ["Elle est aggravée par l'isolement social et la facilité d'accès aux spécialistes.", "Elle survient, à l'inverse, lorsque le fatalisme amène à banaliser les symptômes observés en les mettant sur le compte de la seule vieillesse ou d'un problème social alors qu'ils sont dus à une affection curable.", "Cette attitude est génératrice d'une perte de temps préjudiciable pour le patient.", "La plupart des patients hospitalisés pour problème social ou \"placement\" ont en fait d'authentiques problèmes médicaux mal pris en charge."],
+          "correct_option_ids": [1, 2, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Chez le sujet âgé, les modifications de la personnalité:",
+          "options": ["sont uniquement au niveau affectif", "permettent d'attirer l'attention par la régression", "traduisent parfois un repli narcissique", "peuvent se manifester par un surinvestissement du futur"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Quelle est l'obligation du médecin envers un patient en fin de vie?",
+          "options": ["Provoquer délibérément la mort", "Assurer la qualité d'une vie qui prend fin", "Retirer tout soutien médicale", "sauvegarder la dignité du malade et réconforter son entourages"],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "Une perte de la capacité à s'habiller chez le sujet âgé est:",
+          "options": ["Une atteinte de la mémoire sémantique", "L'un des aspects de la perte de l'autonomie", "Peut survenir lors d'un syndrome démentiel", "Reflète un dysfonctionnement instrumental"],
+          "correct_option_ids": [3]
+        }
+      ]
+    },
+    "8. Nutrition": {
+      "2026": [
+        {
+          "question": "La sarcopénie à un âge gériatrique est (QCM) :",
+          "options": ["Stade ultime de la dénutrition", "Peut être responsable de chute", "C'est un phénomène pathologique", "Apparaît au stade initial de la dénutrition"],
+          "correct_option_ids": [0, 1]
+        },
+        {
+          "question": "Devant une perte de poids récente chez une personne âgée, quels sont les éléments qui vous orientent vers une dénutrition ?",
+          "options": ["Une perte < 10 % en 6 mois", "Un IMC > 21 Kg /M²", "Une albuminémie < 35 g/L", "Un MNA > 17/30"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les principales sources de l'anorexie souvent observée chez le sujet âgé ?",
+          "options": ["Hyperosmie", "Augmentation de la secrétion salivaire", "Hypogueusie", "Trouble de la mastication"],
+          "correct_option_ids": [2, 3]
+        }
+      ],
+      "2025": [
+        {
+          "question": "Quelles sont les principales sources de l'anorexie souvent observée chez le sujet âgé?",
+          "options": ["Hyperosmie", "Augmentation de la sécrétion salivaire", "Hypogueusie", "Trouble de la mastication"],
+          "correct_option_ids": [2, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Devant une perte de poids récente chez une personne âgée, quel est l'éléments qui vous orientent vers une dénutrition sévère",
+          "options": ["Une perte > 10% en 6 mois", "Un IMC >21 Kg/M2", "Une albuminémie <35 g/L", "Un MNA > 17/30"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Devant une perte de poids récente chez une personne âgée, quels sont les éléments qui vous orientent vers une dénutrition?",
+          "options": ["Une perte > 10% en 6 mois", "Un IMC>21 Kg/M2", "Une albuminémie <35 g/L", "Un MNA > 17/30"],
+          "correct_option_ids": [0, 2]
+        },
+        {
+          "question": "Parmi les signes suivants, lesquels sont considérés comme signes d'alerte d'une dénutrition chez une personne âgée ?",
+          "options": ["Revenus financiers satisfaisants", "Régime restrictif", "5 médicaments/j", "Albuminémie > 40 g/L"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Quel est l'intervalle de l'apport calorique d'une personne âgée en bonne santé ?",
+          "options": ["30-35 Kcal/j", "35-40 Kcal/j", "40-45 Kcal/j", "45-50Kcal/j"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Quelle est la valeur max de l'apport protéique d'une personne âgée présentant une dénutrition sur une situation d'hypercatabolisme?",
+          "options": ["1 g/Kg/J", "2 g/Kg/J", "1.2 g/Kg/J", "1.8 g/Kg/ J"],
+          "correct_option_ids": [3]
+        }
+      ]
+    },
+    "9. Physiologie de vieillissement": {
+      "2026": [
+        {
+          "question": "Les anticholinergiques sont des traitements pour certains types d'incontinence urinaire, cependant ils peuvent en être la cause dans certains cas. Quel est le mécanisme dans ce cas ?",
+          "options": ["Incontinence par impériosité", "Incontinence par neurogène ou réflexe", "Incontinence fonctionnelle", "Incontinence par regorgement"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Quels sont les manifestations cardio-pulmonaires observées chez le sujet âgé ?",
+          "options": ["Augmentation de la pression artérielle systolique", "Diminution de la pression partielle d'oxygène (PaO2)", "Absence de signe d'hypertrophie ventriculaire gauche", "Diminution de la pression partielle du CO2 (PCO2)"],
+          "correct_option_ids": [0, 1]
+        },
+        {
+          "question": "Devant un sujet âgé qui présente une incontinence urinaire, avec notion de constipation, la première cause à évoquer est :",
+          "options": ["Infection urinaire", "Iatrogène par alpha-bloquant", "Iatrogène par diurétiques", "Fécalome rectal"],
+          "correct_option_ids": [3]
+        },
+        {
+          "question": "Deux manifestations digestives observées chez le sujet âgé sont :",
+          "options": ["Accélération du transit", "Malabsorption de fer", "Gastrite atrophique", "Conservation de la fonction exocrine du pancréas"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Quelles sont les principales manifestations neurologiques liées au vieillissement ?",
+          "options": ["Augmentation des heures de sommeil", "Difficultés à se concentrer", "Une vitesse d'exécution conservée", "Troubles de la marche"],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "Quelles modifications influencent la pharmacocinétique des médicaments chez la personne âgée ?",
+          "options": ["Réduction de l'absorption intestinale", "Diminution de la clairance rénale", "L'hypoalbuminémie", "Réduction du pH gastrique"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "La polymédication est définie par : QCS",
+          "options": ["≥ 3 médicaments", "≥ 5 médicaments", "≥ 7 médicaments", "≥ 10 médicaments"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Parmi les médicaments suivants, lequel est le plus impliqué dans les chutes chez le sujet âgé?",
+          "options": ["Amlodipine", "Bromazépam", "Metformine", "Oméprazole"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "La conséquence principale de la diminution de la clairance rénale liée à l'âge est :",
+          "options": ["Un risque d'hyperthyroïdie", "Un risque de surdosage des médicaments éliminés par le rein", "Une diminution du risque d'interactions", "Une augmentation systématique de la glycémie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "L'association anticoagulant + AINS entraîne principalement : QCS",
+          "options": ["Une hypokaliémie", "Une hyponatrémie", "Un risque très élevé d'hémorragie", "Une hypercalcémie"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "En cas de suspicion d'iatrogénie, la première étape essentielle est :",
+          "options": ["Faire une échographie rénale", "Modifier immédiatement le traitement", "Rechercher la chronologie de début des symptômes", "Prescrire un traitement symptomatique"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les principales manifestations digestives observées chez le sujet âgé ?",
+          "options": ["Acceleration du transit", "Malabsorption de fer", "Gastrite atrophique", "Conservation de la fonction exocrine du pancreas"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "L'un des effets du vieillissement sur l'organisme humain est celui observé sur les métabolismes, nous avons demandé à un externe en médecine de 6ème année de nous expliquer 4 phénomènes attachés à ce sujet, il a fait une faute, laquelle ?",
+          "options": ["Diminution de l'activité plus grande fréquence du diabète", "Retentissement plus rapide de la dénutrition car moins de réserve", "Retentissement sur la tolérance des médicaments certains médicaments s'accumulant dans le tissu hépatique vont s'éliminer plus lentement", "D'autres sont plus « hydrophiles » donc volume de distribution plus faible donc taux plus élevé >> risques de surdosage"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les retentissements de la modification de la capacité visuelle due au vieillissement ?",
+          "options": ["Vision de près inchangée", "Photophobie", "Chute par perte d'équilibre", "Cataracte"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "Le vieillissement précoce ou prématuré se caractérise par l'apparition de signes de l'âge (rides, relâchement, taches) et une altération de l'organisme plus tôt que prévu (souvent avant 35 ans). Il est majoritairement causé par le stress oxydatif, l'exposition aux UV et des facteurs de mode de vie, le syndrome de Werner est une affection génétique, il se distingue par plusieurs critères :",
+          "options": ["qui fait partie de ces causes rares, autosomique, récessive, qui apparaît surtout en cas de consanguinité des parents.", "La cause en est une détérioration du gène codant pour une hélicase, une des enzymes nécessaires à la réparation de l'ARN.", "Le vieillissement précoce se manifeste chez l'adulte jeune par des maladies cardiovasculaires, un diabète de type 2, une cataracte et de l'ostéoporose.", "Les patients meurent en général vers l'âge de 41 ans."],
+          "correct_option_ids": [0, 2, 3]
+        },
+        {
+          "question": "Le vieillissement est un processus biologique et physiologique universel caractérisé par l'accumulation progressive de dommages moléculaires et cellulaires avec le temps. Il entraîne un déclin naturel des capacités physiques et cognitives, et s'accompagne souvent de transitions sociales et psychologiques, c'est un processus (QCM) :",
+          "options": ["Universel : commun à tous les organismes vivants / Intrinsèque : indépendant des facteurs environnementaux", "Progressif : toujours en marche, même très lent", "Nuisible : baisse rapide des réserves fonctionnelles", "Irréversible : rarement susceptible d'être corrigé"],
+          "correct_option_ids": [0, 1, 3]
+        },
+        {
+          "question": "L'épaississement de la paroi de la vessie du sujet âgé peut entraîner :",
+          "options": ["Des infections urinaires", "Diminution du débit de filtration glomérulaire", "Augmentation de la distension vésicale", "Vidange vésicale incomplète"],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Quelle fracture est la plus observée chez la femme âgée ?",
+          "options": ["Radiale", "Vertébrale", "Fémorale", "Poignet"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Le vieillissement pathologique correspond à l'accumulation de maladies et de facteurs de stress qui accélèrent le déclin physique et cognitif au-delà des effets normaux de l'âge. Contrairement au vieillissement physiologique (sénescence), il entraîne une perte d'autonomie et une altération de la qualité de vie, touchant environ 25% des personnes âgées. Il s'accompagne de nombreuses maladies (maladies mentales, maladies neurodégénératives...), avec d'autres caractéristiques (QCM) :",
+          "options": ["dont l'âge ne représente qu'un facteur de risque.", "Ces maladies, plus souvent chroniques, concernent particulièrement la sphère psychoaffective (dépression), le statut cognitif (démence).", "Touche rarement les femmes et la race noire.", "Peut être évitable chez les hispaniques."],
+          "correct_option_ids": [0, 1]
+        },
+        {
+          "question": "Quelles sont les principales manifestations neurologiques liées au vieillissement ?",
+          "options": ["Augmentation des heures de sommeil", "Difficultés à se concentrer", "Une vitesse d'exécution conservée", "Troubles de la marche"],
+          "correct_option_ids": [1, 3]
+        },
+        {
+          "question": "Quels sont les manifestations cardio-pulmonaires observées chez le sujet âgé ?",
+          "options": ["Augmentation de la pression artérielle systolique.", "Diminution de la pression partielle d'oxygène (PaO2).", "Absence de signe d'hypertrophie ventriculaire gauche.", "Diminution de la pression partielle de CO2 (PCO2)."],
+          "correct_option_ids": [0, 1]
+        }
+      ],
+      "2025": [
+        {
+          "question": "L'épaississement de la paroi de la vessie du sujet âgé peut entraîner: qcm",
+          "options": ["Des infections urinaires", "Diminution du débit de filtration glomérulaire", "Augmentation de la distension vésicale", "Vidange vésicale incomplète"],
+          "correct_option_ids": [0, 3]
+        },
+        {
+          "question": "Quelle fracture est la plus observée chez la femme âgée ?",
+          "options": ["Radiale", "Vertébrale", "Fémorale", "Poignet"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelles sont les principales manifestations digestives observées chez le sujet âgé?",
+          "options": ["Accélération du transit", "Malabsorption de fer", "Gastrite atrophique", "Conservation de la fonction exocrine du pancréas"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Quelles sont les principales manifestations neurologiques liées au vieillissement?",
+          "options": ["Augmentation des heures de sommeil", "Difficultés à se concentrer", "Une vitesse d'exécution conservée", "Troubles de la marche"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quelles sont les retentissements de la modification de la capacite visuelle due au vieillissement ?",
+          "options": ["Vision de près inchangée", "Photophobie", "Chute par perte d'équilibre", "Cataracte"],
+          "correct_option_ids": [1, 2, 3]
+        },
+        {
+          "question": "Quels sont les manifestations cardio- pulmonaires observées chez le sujet âgé?",
+          "options": ["Augmentation de la pression artérielle systolique", "Diminution pression partielle d'oxygène diminuée PaO2", "Absence de signe d'hypertrophie ventriculaire gauche", "Diminution pression partielle CO2 PCO2"],
+          "correct_option_ids": [0, 1]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Parmi les propositions suivantes, quels sont les facteurs intrinsèques qui appuient la théorie du vieillissement?",
+          "options": ["l'hygiène de vie", "l'environnement", "Les gènes", "Le stress oxydatif"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "Quel est le risque encouru chez la personne âgée ayant perdues ses facultés de perception de soif?",
+          "options": ["La dénutrition", "La déshydratation", "L'hyperhydratation", "Les œdèmes"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quel est le risque respiratoire encouru chez une personne âgée",
+          "options": ["L'augmentation de la CVL", "L'augmentation de la CVF", "L'encombrement bronchique", "Une toux assez efficace"],
+          "correct_option_ids": [2]
+        }
+      ]
+    },
+    "10. Troubles cognitifs": {
+      "2026": [
+        {
+          "question": "Le trouble cognitif majeur correspond à (QCS) :",
+          "options": ["Une diminution normalisée au vieillissement", "Une altération significative des fonctions cognitives avec perte d'autonomie", "Un trouble uniquement de la mémoire", "Un trouble uniquement psychologique"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "La cause la plus fréquente de démence chez le sujet âgé est :",
+          "options": ["Démence vasculaire", "Maladie d'Alzheimer", "Démence fronto-temporale", "Démence à corps de Lewy"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Parmi les fonctions cognitives suivantes, laquelle est le plus souvent atteinte en premier dans la maladie d'Alzheimer ?",
+          "options": ["Langage", "Mémoire épisodique", "Praxis", "Fonctions exécutives"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Un trouble cognitif est une altération des fonctions cérébrales (mémoire, langage, attention, raisonnement) qui impacte le quotidien. Ses causes et manifestations varient (du trouble léger à la démence) et nécessitent une évaluation médicale précise. Lors de la consultation gériatrique, le trouble cognitif influence le déroulement de celle-ci par le fait de (QCM) :",
+          "options": ["Le plus fréquent chez la personne âgée malade.", "Nécessité d'un accompagnement d'une tierce personne qui facilite la reconstitution de l'anamnèse.", "L'expérience du clinicien se juge alors dans son habileté à recueillir des informations pertinentes du tiers, tout en écoutant la formulation des plaintes par le patient.", "Un temps de dialogue, seul avec le patient doit être préservé dans le déroulement de la consultation."],
+          "correct_option_ids": [0, 1, 2, 3]
+        }
+      ],
+      "2024": [
+        {
+          "question": "Dans la maladie d'Alzheimer",
+          "options": ["L'atteinte est sous corticale", "L'évolution de La dégénérescence est rapide", "l'apparition de prodromes est possible", "L'altération de l'autonomie est possible"],
+          "correct_option_ids": [2, 3]
+        },
+        {
+          "question": "La dépression chez le sujet âgé",
+          "options": ["Est possible devant l'ensemble des pertes liées au vieillissement", "Est rare vu la maturité psychologique", "Est suspectée devant un refus alimentaire", "Doit être toujours cherchée lors du bilan gériatrique"],
+          "correct_option_ids": [0, 2, 3]
+        }
+      ]
+    },
+    "11. TD : Décubitus prolongé": {
+      "2026": [
+        {
+          "question": "Quelle est l'une des conséquences osseuses de l'immobilisation prolongée ?",
+          "options": ["Augmentation de la densité osseuse", "Augmentation de la résorption osseuse", "Hypercalcémie compensatoire", "Hyperérosion osseuse"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Combien de temps faut-il pour qu'une escarre se forme en position couchée ?",
+          "options": ["1 jour", "12 heures", "4 heures", "48 heures"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle est la principale cause de thrombose en cas d'immobilisation prolongée ?",
+          "options": ["Une augmentation du débit sanguin", "Une stase veineuse", "Une hypovolémie", "Une hyperthermie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Dans ce cas, citez une cause iatrogène du décubitus chez un sénior :",
+          "options": ["Un plâtre trop serré", "Une hydratation excessive", "Une radiographie", "Un vaccin"],
+          "correct_option_ids": [0]
+        },
+        {
+          "question": "Les escarres sont principalement dues à :QCS",
+          "options": ["Une infection bactérienne primaire", "Une pression prolongée sur les tissus mous", "Un déficit immunitaire", "Une mauvaise hygiène de vie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quels sont les facteurs de risque majeurs de développement d'escarres ?",
+          "options": ["Immobilisation prolongée", "Diabète sucré", "Hyperactivité physique", "Malnutrition"],
+          "correct_option_ids": [0, 1, 3]
+        },
+        {
+          "question": "Quel est le site le plus fréquent d'apparition des escarres chez les patients alités ?",
+          "options": ["Coudes", "Talons", "Sacrum", "Plante des pieds"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Le traitement des escarres repose sur : QCM",
+          "options": ["L'antibiothérapie systématique", "Le soulagement des pressions", "Le maintien d'une bonne hygiène cutanée", "Une exposition prolongée à l'air libre"],
+          "correct_option_ids": [1, 2]
+        },
+        {
+          "question": "Quelle affirmation est fausse concernant l'évolution d'une escarre ?",
+          "options": ["Une escarre peut évoluer vers une nécrose tissulaire", "Une escarre guérit toujours spontanément sans traitement", "Une escarre peut se compliquer d'une infection profonde", "La prévention est essentielle pour éviter leur apparition"],
+          "correct_option_ids": [1]
+        }
+      ],
+      "2025": [
+        {
+          "question": "Combien de temps faut-il pour qu'une escarre se forme en position couchée ? qcs",
+          "options": ["1 jour", "12 heures", "4 heures", "48 heures"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Parmi ces situations, laquelle est une cause fréquente de décubitus prolongé ?",
+          "options": ["Activité physique intense", "Coma ou paralysie", "Alimentation déséquilibrée", "Stress psychologique"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quel type de lit peut aider à prévenir les escarres ?",
+          "options": ["Lit rigide", "Lit à eau, air ou mousse spécial", "Lit inclinable à 90°", "Lit en fer sans matelas"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle complication est tardive ?",
+          "options": ["Phlébite", "Escarre", "Ostéoporose", "Infection urinaire"],
+          "correct_option_ids": [2]
+        },
+        {
+          "question": "Quelle complication est typiquement précoce en cas de décubitus ?",
+          "options": ["Ostéoporose", "Escarre", "Troubles psychologiques", "Lithiase urinaire"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle complication neurologique peut survenir en cas d'immobilisation prolongé",
+          "options": ["Augmentation du tonus musculaire", "Compression nerveuse", "Amélioration de la proprioception", "Augmentation de la réactivité sensorielle"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle complication respiratoire est fréquente en cas d'alitement prolongé ?",
+          "options": ["Hyperventilation", "Encombrement bronchique", "Hypertension pulmonaire", "Augmentation de la capacité vitale"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle échelle est utilisée pour évaluer le risque d'escarres ?",
+          "options": ["L'échelle de Glasgow", "L'échelle de Braden", "L'échelle de Norton", "L'échelle de Waterlow"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est la conséquence articulaire majeure de l'immobilisation?",
+          "options": ["Diminution de la résistance tendineuse", "Raideur articulaire", "Hyperlaxité ligamentaire", "Augmentation de la flexibilité"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est la conséquence osseuse de l'alitement prolongé ?",
+          "options": ["Augmentation de la densité osseuse", "Augmentation de la résorption osseuse", "Hypercalcémie compensatoire", "Hypercroissance osseuse"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est la meilleure mesure de prévention des escarres ?",
+          "options": ["Appliquer une crème hydratante", "Changer régulièrement la position du patient", "Augmenter la température de la chambre", "Diminuer l'hydratation"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Quelle est la principale cause de thrombose en cas d'immobilisation prolongée ?",
+          "options": ["Une augmentation du débit sanguin", "Une stase veineuse", "Une hypovolémie", "Une hyperthermie"],
+          "correct_option_ids": [1]
+        },
+        {
+          "question": "Une cause iatrogène du décubitus est:",
+          "options": ["Un plâtre trop serré", "Une hydratation excessive", "Une radiographie", "Un vaccin"],
+          "correct_option_ids": [0]
+        }
+      ]
+    },
+    "12. TD : Troubles de la marche et de l'équilibre": {
+      "2026": [
+        {
+          "question": "Parmi les propositions suivantes, laquelle ou lesquelles peuvent être responsables de chute chez le sujet âgé ?",
+          "options": ["La cataracte", "L'hypotension orthostatique", "Héminégligence suite à un AVC", "Un chaussage mal adapté"],
+          "correct_option_ids": [0, 1, 2, 3]
+        }
+      ],
+      "2025": [
+        {
+          "question": "Parmi les propositions suivantes, laquelle ou lesquelles peuvent être responsables de chute chez le sujet âgé",
+          "options": ["La cataracte", "L'hypotension orthostatique", "Héminégligence suite à un AVC", "Un chaussage mal adapté"],
+          "correct_option_ids": [0, 1, 2, 3]
+        },
+        {
+          "question": "Un patient marchant en « fauchant » est atteint d'un trouble de la marche :",
+          "options": ["Ataxique", "Parkinsonien", "Astasie-abasique", "Hémiplégique"],
+          "correct_option_ids": [3]
+        }
+      ]
+    }
+  }
+}
