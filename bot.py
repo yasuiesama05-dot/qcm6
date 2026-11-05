@@ -44,10 +44,12 @@ signalement :
   - ❌ Erreur dans les bonnes réponses
   - 📚 Question dans la mauvaise leçon
   - ⚠️ Question/options incomplètes
-Chaque signalement est ajouté à reported_questions.json (type, question,
-options, bonne(s) réponse(s), module/leçon, utilisateur, date). La commande
-/reports renvoie ce fichier (réservée aux ADMIN_USER_IDS). Aucune
-notification n'est envoyée à l'admin : il consulte simplement le fichier.
+Chaque signalement est envoyé immédiatement en MESSAGE PRIVÉ à chaque
+administrateur (ADMIN_USER_IDS), avec un bouton « ✉️ Répondre à
+l'utilisateur » pour lui écrire directement, ET ajouté à
+reported_questions.json (type, question, options, bonne(s) réponse(s),
+module/leçon, utilisateur, date). La commande /reports renvoie ce fichier
+(réservée aux ADMIN_USER_IDS).
 
 === PANNEAU ADMIN (/admin) ===
   - Liste paginée des utilisateurs du bot (bot_users.json), recherche par
@@ -652,6 +654,86 @@ async def save_report(record: dict):
             logger.error("Impossible d'écrire dans %s : %s", REPORTS_FILE, e)
 
 
+# ============ NOTIFICATION DES SIGNALEMENTS AUX ADMINS ============
+
+def _clip(value, limit: int) -> str:
+    """Tronque un texte pour rester sous la limite Telegram sans jamais
+    couper au milieu d'une balise HTML (le découpage se fait sur du texte
+    déjà échappé, avant d'être inséré dans le message)."""
+    text = str(value if value is not None else "")
+    return text if len(text) <= limit else text[: max(0, limit - 1)] + "…"
+
+
+def build_report_notification(record: dict) -> str:
+    """Construit le message privé envoyé aux admins pour un signalement.
+
+    Les textes sont tronqués champ par champ (et non le message final) pour
+    ne jamais dépasser 4096 caractères ni laisser une balise HTML ouverte."""
+    module = record.get("module") or "?"
+    path = " → ".join([str(module)] + [str(p) for p in (record.get("path") or [])])
+    options_lines = "\n".join(
+        f"{LETTERS[i]}. {html.escape(_clip(opt, 200))}"
+        for i, opt in enumerate(record.get("options") or [])
+    )
+    correct_lines = "\n".join(
+        f"✅ {html.escape(_clip(opt, 200))}"
+        for opt in (record.get("correct_options") or [])
+    ) or "—"
+    user = record.get("username") or "?"
+
+    return (
+        "🚩 <b>Nouveau signalement</b>\n\n"
+        f"📌 Type : <b>{html.escape(str(record.get('report_type_label') or '?'))}</b>\n"
+        f"🕒 {record.get('date', '')}\n"
+        f"📚 {html.escape(_clip(path, 200))}\n"
+        f"👤 {html.escape(_clip(user, 80))} — ID <code>{record.get('chat_id')}</code>\n\n"
+        f"❓ <b>{html.escape(_clip(record.get('question'), 900))}</b>\n\n"
+        f"{options_lines}\n\n"
+        f"<b>Bonne(s) réponse(s) enregistrée(s) :</b>\n{correct_lines}"
+    )
+
+
+async def notify_admins_report(context: ContextTypes.DEFAULT_TYPE, record: dict):
+    """Envoie le signalement en message privé à CHAQUE administrateur
+    (ADMIN_USER_IDS), avec un bouton pour répondre directement à
+    l'utilisateur qui l'a signalé.
+
+    Si un admin n'a jamais démarré le bot, Telegram refuse l'envoi : l'erreur
+    est simplement journalisée pour ne pas bloquer les autres admins ni
+    l'utilisateur qui signale."""
+    if not ADMIN_USER_IDS:
+        logger.warning(
+            "Signalement reçu mais ADMIN_USER_IDS est vide, personne à prévenir : %s",
+            record.get("question"),
+        )
+        return
+
+    text = build_report_notification(record)
+    # "adm:u:<chat_id>" est le même callback que le panneau /admin : il ouvre
+    # directement la composition d'un message vers cet utilisateur.
+    markup = InlineKeyboardMarkup([[
+        InlineKeyboardButton(
+            "✉️ Répondre à l'utilisateur",
+            callback_data=f"{ADM}u:{record.get('chat_id')}",
+        )
+    ]])
+
+    for admin_id in sorted(ADMIN_USER_IDS):
+        try:
+            await call_with_retry(
+                lambda aid=admin_id: context.bot.send_message(
+                    aid, text, parse_mode="HTML",
+                    reply_markup=markup, disable_web_page_preview=True,
+                ),
+                label=f"send_message(signalement admin {admin_id})",
+            )
+        except Exception as e:
+            logger.error(
+                "Signalement non envoyé à l'admin %s (a-t-il déjà fait /start ?) : %s",
+                admin_id, e,
+            )
+
+
 def cleanup_question_context(context: ContextTypes.DEFAULT_TYPE = None):
     """Supprime les contextes de question trop anciens pour éviter une fuite
     mémoire sur un processus qui tourne longtemps avec beaucoup d'utilisateurs."""
@@ -723,7 +805,8 @@ async def handle_report_cancel(update: Update, context: ContextTypes.DEFAULT_TYP
 async def handle_report_type(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Clic sur un type de signalement : enregistre le signalement (type,
     question, options, bonne(s) réponse(s), module/leçon) dans
-    reported_questions.json. Aucune notification n'est envoyée à l'admin."""
+    reported_questions.json ET l'envoie immédiatement en message privé à
+    chaque administrateur, pour qu'il le voie directement dans Telegram."""
     query = update.callback_query
     try:
         _, token, type_key = query.data.split(":", 2)
@@ -757,9 +840,12 @@ async def handle_report_type(update: Update, context: ContextTypes.DEFAULT_TYPE)
         "options": info["options"],
         "correct_options": correct_texts,
     }
-    await save_report(record)
-
+    # On répond d'abord au clic (Telegram attend une réponse rapide), puis on
+    # prévient les admins : l'envoi peut prendre du temps (rate limiter/retry).
     await query.answer("🚩 Merci, la question a été signalée pour relecture.", show_alert=True)
+    await save_report(record)
+    await notify_admins_report(context, record)
+
     await _edit_markup(query, build_question_button_markup(token), "edit_markup(report done)")
 
 
