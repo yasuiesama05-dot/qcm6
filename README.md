@@ -5,7 +5,9 @@ profondeur libre, avec :
 
 - navigation par clavier persistant (module → dossier → … → questions) ;
 - réponses correctes cachées sous un **spoiler** ;
-- bouton **🚩 Signaler** sous chaque question ;
+- bouton **🚩 Signaler** sous chaque question → message privé à chaque admin,
+  avec correction **directement depuis Telegram** (texte, options, bonne
+  réponse, suppression) ;
 - génération d'un **examen HTML autonome** (correction en JavaScript) ;
 - panneau admin (`/admin`, `/send`, `/reports`) ;
 - abonnement obligatoire à une chaîne Telegram.
@@ -40,9 +42,12 @@ python bot.py                        # mode polling (pas de webhook)
 | Variable | Obligatoire | Défaut |
 |---|---|---|
 | `BOT_TOKEN` | oui | — |
-| `ADMIN_USER_IDS` | non | `5696844039` (séparés par des virgules) |
+| `ADMIN_USER_IDS` | non | `5696844039,5435592397` (séparés par des virgules) |
 | `REQUIRED_CHANNEL` | non | `@qcMAX_batna` (vide = désactivé) |
 | `CHANNEL_URL` | non | vide |
+| `GITHUB_TOKEN` | non | vide (corrections perdues au redéploiement) |
+| `GITHUB_REPO` | non | `yasuiesama05-dot/qcm6` |
+| `GITHUB_BRANCH` | non | `main` |
 | `WEBHOOK_SECRET` | non | dérivé du token |
 | `PORT` / `RENDER_EXTERNAL_URL` | fournis par Render | — |
 

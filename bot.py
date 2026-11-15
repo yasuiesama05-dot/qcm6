@@ -44,12 +44,14 @@ signalement :
   - ❌ Erreur dans les bonnes réponses
   - 📚 Question dans la mauvaise leçon
   - ⚠️ Question/options incomplètes
-Chaque signalement est envoyé immédiatement en MESSAGE PRIVÉ à chaque
-administrateur (ADMIN_USER_IDS), avec un bouton « ✉️ Répondre à
-l'utilisateur » pour lui écrire directement, ET ajouté à
-reported_questions.json (type, question, options, bonne(s) réponse(s),
-module/leçon, utilisateur, date). La commande /reports renvoie ce fichier
-(réservée aux ADMIN_USER_IDS).
+Chaque signalement est ajouté à reported_questions.json (type, question,
+options, bonne(s) réponse(s), module/leçon, utilisateur, date) ET envoyé
+immédiatement en message privé à chaque admin de ADMIN_USER_IDS, avec des
+boutons pour corriger directement depuis Telegram (texte, options, bonne
+réponse, suppression). La correction est enregistrée sur GitHub (API) pour
+survivre aux redéploiements de Render. Sans GITHUB_TOKEN, elle reste locale
+au serveur et est perdue au redéploiement suivant.
+La commande /reports reste disponible pour récupérer le fichier complet.
 
 === PANNEAU ADMIN (/admin) ===
   - Liste paginée des utilisateurs du bot (bot_users.json), recherche par
@@ -116,6 +118,7 @@ from telegram.ext import (
 )
 
 from qcm_storage import load_qcm_data, get_node
+import qcm_storage
 
 # ============ CONFIGURATION ============
 # Le secret du bot n'est JAMAIS écrit ici en clair : il est lu depuis la
@@ -151,12 +154,30 @@ REPORT_TYPES = {
 }
 REPORTS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reported_questions.json")
 
+# --- Correction d'une question directement depuis le message de signalement ---
+REPORT_EDIT_TAG = "redit:"        # redit:<token>:<action>  (t=texte, o=options, c=bonne réponse, d=supprimer)
+REPORT_DELETE_TAG = "redel:"      # redel:<token>:y        (confirmation de suppression)
+REPORT_EDIT_TTL_SECONDS = 7 * 24 * 3600
+REPORT_EDIT_CACHE: dict[str, dict] = {}   # token -> {"record": ..., "created_at": ...}
+
+# Pour que les corrections soient DURABLES sur Render (disque temporaire), le
+# bot peut committer le fichier data/*.json modifié sur GitHub via l'API.
+# Variables d'environnement (Render → Environment) :
+#   GITHUB_TOKEN  : token avec droit "Contents: Read and write" sur le dépôt
+#   GITHUB_REPO   : ex. "yasuiesama05-dot/qcm6" (le dépôt déployé par Render)
+#   GITHUB_BRANCH : "main" par défaut
+# Sans GITHUB_TOKEN, la correction marche quand même mais elle est perdue au
+# prochain redéploiement de Render.
+GITHUB_TOKEN = (os.environ.get("GITHUB_TOKEN") or "").strip()
+GITHUB_REPO = (os.environ.get("GITHUB_REPO") or "yasuiesama05-dot/qcm6").strip()
+GITHUB_BRANCH = (os.environ.get("GITHUB_BRANCH") or "main").strip()
+
 # Identifiants Telegram numériques des administrateurs : accès à /admin,
 # /send et /reports. Si le set est vide, /admin et /send sont désactivés et
 # /reports reste ouvert à tout le monde.
 # Peut être surchargé par la variable d'environnement ADMIN_USER_IDS
 # (IDs séparés par des virgules, ex. "123456789,987654321").
-DEFAULT_ADMIN_USER_IDS = "5696844039"
+DEFAULT_ADMIN_USER_IDS = "5696844039,5435592397"
 
 
 def _parse_admin_ids(raw: str) -> set[int]:
@@ -654,84 +675,308 @@ async def save_report(record: dict):
             logger.error("Impossible d'écrire dans %s : %s", REPORTS_FILE, e)
 
 
-# ============ NOTIFICATION DES SIGNALEMENTS AUX ADMINS ============
+def format_report_message(record: dict) -> str:
+    """Construit le texte du message privé envoyé aux admins pour un signalement."""
+    options = record.get("options") or []
+    correct_texts = record.get("correct_options") or []
+    correct_indexes = {i for i, opt in enumerate(options) if opt in correct_texts}
 
-def _clip(value, limit: int) -> str:
-    """Tronque un texte pour rester sous la limite Telegram sans jamais
-    couper au milieu d'une balise HTML (le découpage se fait sur du texte
-    déjà échappé, avant d'être inséré dans le message)."""
-    text = str(value if value is not None else "")
-    return text if len(text) <= limit else text[: max(0, limit - 1)] + "…"
+    lines = [
+        "🚩 إبلاغ جديد عن سؤال",
+        "Nouveau signalement de question",
+        "",
+        f"النوع / Type : {record.get('report_type_label') or record.get('report_type')}",
+        f"المستخدم / Par : {record.get('username') or '?'} (ID: {record.get('user_id')})",
+        f"التاريخ / Date : {record.get('date')}",
+    ]
+    if record.get("module"):
+        lines.append(f"📚 Module : {record['module']}")
+    path = record.get("path") or []
+    if path:
+        lines.append(f"📂 Leçon : {' > '.join(str(p) for p in path)}")
+    if record.get("quiz_label"):
+        lines.append(f"🏷️ Quiz : {record['quiz_label']}")
+
+    lines += ["", f"❓ {record.get('question')}", ""]
+    for i, opt in enumerate(options):
+        mark = "✅" if i in correct_indexes else "▪️"
+        letter = LETTERS[i] if i < len(LETTERS) else str(i + 1)
+        lines.append(f"{mark} {letter}. {opt}")
+
+    if correct_texts:
+        letters = []
+        for text in correct_texts:
+            try:
+                idx = options.index(text)
+                letters.append(LETTERS[idx] if idx < len(LETTERS) else text)
+            except ValueError:
+                letters.append(text)
+        lines += ["", f"✔️ Bonne(s) réponse(s) : {', '.join(letters)}"]
+
+    text = "\n".join(lines)
+    return text[:TG_MESSAGE_MAX]
 
 
-def build_report_notification(record: dict) -> str:
-    """Construit le message privé envoyé aux admins pour un signalement.
-
-    Les textes sont tronqués champ par champ (et non le message final) pour
-    ne jamais dépasser 4096 caractères ni laisser une balise HTML ouverte."""
-    module = record.get("module") or "?"
-    path = " → ".join([str(module)] + [str(p) for p in (record.get("path") or [])])
-    options_lines = "\n".join(
-        f"{LETTERS[i]}. {html.escape(_clip(opt, 200))}"
-        for i, opt in enumerate(record.get("options") or [])
-    )
-    correct_lines = "\n".join(
-        f"✅ {html.escape(_clip(opt, 200))}"
-        for opt in (record.get("correct_options") or [])
-    ) or "—"
-    user = record.get("username") or "?"
-
-    return (
-        "🚩 <b>Nouveau signalement</b>\n\n"
-        f"📌 Type : <b>{html.escape(str(record.get('report_type_label') or '?'))}</b>\n"
-        f"🕒 {record.get('date', '')}\n"
-        f"📚 {html.escape(_clip(path, 200))}\n"
-        f"👤 {html.escape(_clip(user, 80))} — ID <code>{record.get('chat_id')}</code>\n\n"
-        f"❓ <b>{html.escape(_clip(record.get('question'), 900))}</b>\n\n"
-        f"{options_lines}\n\n"
-        f"<b>Bonne(s) réponse(s) enregistrée(s) :</b>\n{correct_lines}"
-    )
+def build_report_edit_markup(token: str) -> InlineKeyboardMarkup:
+    """Boutons de correction affichés sous le message de signalement."""
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("✏️ Texte", callback_data=f"{REPORT_EDIT_TAG}{token}:t"),
+            InlineKeyboardButton("🔤 Options", callback_data=f"{REPORT_EDIT_TAG}{token}:o"),
+        ],
+        [
+            InlineKeyboardButton("✅ Bonne réponse", callback_data=f"{REPORT_EDIT_TAG}{token}:c"),
+            InlineKeyboardButton("🗑️ Supprimer", callback_data=f"{REPORT_EDIT_TAG}{token}:d"),
+        ],
+    ])
 
 
-async def notify_admins_report(context: ContextTypes.DEFAULT_TYPE, record: dict):
-    """Envoie le signalement en message privé à CHAQUE administrateur
-    (ADMIN_USER_IDS), avec un bouton pour répondre directement à
-    l'utilisateur qui l'a signalé.
+def _register_report_for_edit(record: dict) -> str:
+    """Mémorise le signalement sous un token court pour les boutons de correction."""
+    token = uuid.uuid4().hex[:10]
+    REPORT_EDIT_CACHE[token] = {"record": record, "created_at": time.monotonic()}
+    if len(REPORT_EDIT_CACHE) > 2000:      # garde-fou mémoire
+        oldest = sorted(REPORT_EDIT_CACHE.items(), key=lambda kv: kv[1]["created_at"])[:500]
+        for key, _ in oldest:
+            REPORT_EDIT_CACHE.pop(key, None)
+    return token
 
-    Si un admin n'a jamais démarré le bot, Telegram refuse l'envoi : l'erreur
-    est simplement journalisée pour ne pas bloquer les autres admins ni
-    l'utilisateur qui signale."""
+
+async def notify_admins_about_report(context: ContextTypes.DEFAULT_TYPE, record: dict):
+    """Envoie le signalement en message privé à chaque admin (ADMIN_USER_IDS),
+    avec des boutons pour corriger la question directement depuis Telegram.
+    Un admin qui n'a jamais ouvert le bot ne peut pas être contacté : l'échec
+    est simplement journalisé, les autres admins reçoivent quand même le message."""
     if not ADMIN_USER_IDS:
-        logger.warning(
-            "Signalement reçu mais ADMIN_USER_IDS est vide, personne à prévenir : %s",
-            record.get("question"),
-        )
+        logger.warning("Signalement reçu mais ADMIN_USER_IDS est vide : aucun admin à prévenir.")
         return
 
-    text = build_report_notification(record)
-    # "adm:u:<chat_id>" est le même callback que le panneau /admin : il ouvre
-    # directement la composition d'un message vers cet utilisateur.
-    markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton(
-            "✉️ Répondre à l'utilisateur",
-            callback_data=f"{ADM}u:{record.get('chat_id')}",
-        )
-    ]])
-
+    token = _register_report_for_edit(record)
+    text = format_report_message(record) + "\n\n🛠️ Corrige directement avec les boutons ci-dessous :"
+    markup = build_report_edit_markup(token)
     for admin_id in sorted(ADMIN_USER_IDS):
         try:
             await call_with_retry(
                 lambda aid=admin_id: context.bot.send_message(
-                    aid, text, parse_mode="HTML",
-                    reply_markup=markup, disable_web_page_preview=True,
+                    aid, text, reply_markup=markup, disable_web_page_preview=True
                 ),
                 label=f"send_message(signalement admin {admin_id})",
             )
         except Exception as e:
-            logger.error(
-                "Signalement non envoyé à l'admin %s (a-t-il déjà fait /start ?) : %s",
-                admin_id, e,
+            logger.warning(
+                "Impossible d'envoyer le signalement à l'admin %s "
+                "(a-t-il déjà démarré le bot ?) : %s", admin_id, e,
             )
+
+
+# ============ CORRECTION D'UNE QUESTION DEPUIS LE SIGNALEMENT ============
+
+def _iter_question_lists(node):
+    """Parcourt l'arbre « lessons » et renvoie toutes les listes de questions."""
+    if isinstance(node, list):
+        yield node
+    elif isinstance(node, dict):
+        for value in node.values():
+            yield from _iter_question_lists(value)
+
+
+def _same_question_text(a, b) -> bool:
+    """Compare deux textes de question en ignorant espaces/casse superflus."""
+    norm = lambda s: " ".join((s or "").split()).strip().lower()
+    return norm(a) == norm(b)
+
+
+def _locate_question(record: dict):
+    """Retrouve une question signalée dans data/*.json.
+    Renvoie (nom_fichier, contenu_json, liste, index) ou None."""
+    question = (record.get("question") or "").strip()
+    module = (record.get("module") or "").strip().lower()
+    if not question:
+        return None
+
+    for filename in qcm_storage.list_module_files():
+        file_path = os.path.join(qcm_storage.DATA_DIR, filename)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = json.load(f)
+        except Exception:
+            continue
+        if not isinstance(content, dict):
+            continue
+        if module and (content.get("module") or "").strip().lower() != module:
+            continue
+
+        lessons = content.get("lessons") or {}
+        lists = []
+        if record.get("path"):
+            node = lessons
+            for key in record["path"]:
+                if not isinstance(node, dict):
+                    node = None
+                    break
+                match = next(
+                    (k for k in node if (k or "").strip().lower() == str(key).strip().lower()),
+                    None,
+                )
+                if match is None:
+                    node = None
+                    break
+                node = node[match]
+            if isinstance(node, list):
+                lists.append(node)
+        if not lists:
+            lists = list(_iter_question_lists(lessons))
+
+        for lst in lists:
+            for i, q in enumerate(lst):
+                if isinstance(q, dict) and _same_question_text(q.get("question"), question):
+                    return filename, content, lst, i
+    return None
+
+
+def _write_module_file(filename: str, content: dict) -> str:
+    """Écrit le fichier data/<filename> et recharge QCM_DATA immédiatement.
+    Renvoie le texte exact du fichier (pour le commit GitHub)."""
+    global QCM_DATA
+    text = json.dumps(content, ensure_ascii=False, indent=2) + "\n"
+    file_path = os.path.join(qcm_storage.DATA_DIR, filename)
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(text)
+    QCM_DATA = load_qcm_data()
+    return text
+
+
+def apply_report_edit(record: dict, action: str, raw_text: str):
+    """Applique une correction (texte / options / bonne réponse) et renvoie
+    (fichier, texte_json). Lève ValueError avec un message clair si la saisie
+    est invalide."""
+    found = _locate_question(record)
+    if found is None:
+        raise ValueError(
+            "❌ Question introuvable dans data/*.json "
+            "(peut-être déjà modifiée ou supprimée)."
+        )
+    filename, content, lst, index = found
+    question = lst[index]
+    options = list(question.get("options") or [])
+
+    if action == "t":
+        value = raw_text.strip()
+        if not value:
+            raise ValueError("Le texte de la question est vide.")
+        question["question"] = value
+
+    elif action == "o":
+        new_options = []
+        for line in raw_text.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            line = re.sub(r"^[A-Ea-e]\s*[).\-:]\s*", "", line)
+            line = re.sub(r"^[-•*]\s*", "", line)
+            if line:
+                new_options.append(line)
+        if not (2 <= len(new_options) <= 5):
+            raise ValueError("Il faut entre 2 et 5 options, une par ligne.")
+        kept_correct = [i for i in (question.get("correct_option_ids") or []) if i < len(new_options)]
+        if not kept_correct:
+            raise ValueError(
+                "⚠️ Avec ces options, plus aucune bonne réponse ne reste.\n"
+                "Envoie les options, puis corrige la bonne réponse avec le bouton « ✅ »."
+            )
+        question["options"] = new_options
+        question["correct_option_ids"] = kept_correct
+
+    elif action == "c":
+        letters = re.findall(r"[A-Ea-e]|\d", raw_text)
+        if not letters:
+            raise ValueError("Envoie des lettres (A, B, C…) ou des numéros (1, 2, 3…).")
+        indexes = set()
+        for ch in letters:
+            i = int(ch) - 1 if ch.isdigit() else ord(ch.upper()) - ord("A")
+            if i < 0 or i >= len(options):
+                last = LETTERS[len(options) - 1] if 0 < len(options) <= len(LETTERS) else "?"
+                raise ValueError(f"❌ « {ch.upper()} » ne correspond à aucune option (A–{last}).")
+            indexes.add(i)
+        question["correct_option_ids"] = sorted(indexes)
+
+    else:
+        raise ValueError("Action inconnue.")
+
+    return filename, _write_module_file(filename, content)
+
+
+def delete_reported_question(record: dict):
+    """Supprime la question signalée du fichier data/*.json.
+    Renvoie (fichier, texte_json) ou lève ValueError."""
+    found = _locate_question(record)
+    if found is None:
+        raise ValueError("❌ Question introuvable (déjà modifiée ou supprimée).")
+    filename, content, lst, index = found
+    lst.pop(index)
+    return filename, _write_module_file(filename, content)
+
+
+def _github_commit_file_sync(filename: str, file_text: str, commit_message: str):
+    """Commit data/<filename> sur GitHub via l'API Contents (appel bloquant)."""
+    import base64
+    import urllib.error
+    import urllib.parse
+    import urllib.request
+
+    api_url = (
+        f"https://api.github.com/repos/{GITHUB_REPO}/contents/data/"
+        f"{urllib.parse.quote(filename)}"
+    )
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "qcm-bot",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+    sha = None
+    try:
+        req = urllib.request.Request(
+            f"{api_url}?ref={urllib.parse.quote(GITHUB_BRANCH)}", headers=headers
+        )
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            sha = json.loads(resp.read().decode("utf-8")).get("sha")
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+
+    payload = {
+        "message": commit_message,
+        "content": base64.b64encode(file_text.encode("utf-8")).decode("ascii"),
+        "branch": GITHUB_BRANCH,
+    }
+    if sha:
+        payload["sha"] = sha
+
+    req = urllib.request.Request(
+        api_url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers=headers,
+        method="PUT",
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        resp.read()
+
+
+async def sync_module_to_github(filename: str, file_text: str, commit_message: str):
+    """Enregistre la correction sur GitHub (Render redéploie automatiquement).
+    Renvoie (ok, détail). Ne lève jamais : l'échec est journalisé."""
+    if not GITHUB_TOKEN:
+        return False, "GITHUB_TOKEN absent des variables d'environnement Render"
+    try:
+        await asyncio.to_thread(
+            _github_commit_file_sync, filename, file_text, commit_message
+        )
+        return True, "ok"
+    except Exception as e:
+        logger.error("Échec du commit GitHub pour data/%s : %s", filename, e)
+        return False, str(e)
 
 
 def cleanup_question_context(context: ContextTypes.DEFAULT_TYPE = None):
@@ -743,6 +988,13 @@ def cleanup_question_context(context: ContextTypes.DEFAULT_TYPE = None):
         question_context.pop(t, None)
     if expired:
         logger.info("Nettoyage question_context : %s entrées expirées supprimées", len(expired))
+
+    stale_reports = [
+        t for t, entry in REPORT_EDIT_CACHE.items()
+        if now - entry.get("created_at", now) > REPORT_EDIT_TTL_SECONDS
+    ]
+    for t in stale_reports:
+        REPORT_EDIT_CACHE.pop(t, None)
 
 
 # ============ SIGNALEMENT : BOUTONS + TYPES ============
@@ -805,8 +1057,8 @@ async def handle_report_cancel(update: Update, context: ContextTypes.DEFAULT_TYP
 async def handle_report_type(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Clic sur un type de signalement : enregistre le signalement (type,
     question, options, bonne(s) réponse(s), module/leçon) dans
-    reported_questions.json ET l'envoie immédiatement en message privé à
-    chaque administrateur, pour qu'il le voie directement dans Telegram."""
+    reported_questions.json ET l'envoie en message privé aux admins
+    (ADMIN_USER_IDS) pour qu'ils le voient directement dans Telegram."""
     query = update.callback_query
     try:
         _, token, type_key = query.data.split(":", 2)
@@ -840,12 +1092,10 @@ async def handle_report_type(update: Update, context: ContextTypes.DEFAULT_TYPE)
         "options": info["options"],
         "correct_options": correct_texts,
     }
-    # On répond d'abord au clic (Telegram attend une réponse rapide), puis on
-    # prévient les admins : l'envoi peut prendre du temps (rate limiter/retry).
-    await query.answer("🚩 Merci, la question a été signalée pour relecture.", show_alert=True)
     await save_report(record)
-    await notify_admins_report(context, record)
+    await notify_admins_about_report(context, record)
 
+    await query.answer("🚩 Merci, la question a été signalée pour relecture.", show_alert=True)
     await _edit_markup(query, build_question_button_markup(token), "edit_markup(report done)")
 
 
@@ -873,6 +1123,160 @@ async def cmd_reports(update: Update, context: ContextTypes.DEFAULT_TYPE):
             document=InputFile(f, filename=os.path.basename(REPORTS_FILE)),
             caption=f"🚩 {count} question(s) signalée(s).",
         )
+
+
+# ============ CORRECTION DEPUIS LE MESSAGE DE SIGNALEMENT (boutons) ============
+
+def _report_option_lines(record: dict) -> str:
+    options = record.get("options") or []
+    return "\n".join(
+        f"{LETTERS[i] if i < len(LETTERS) else i + 1}. {opt}" for i, opt in enumerate(options)
+    )
+
+
+def _report_correct_letters(record: dict) -> str:
+    options = record.get("options") or []
+    letters = []
+    for text in record.get("correct_options") or []:
+        if text in options and options.index(text) < len(LETTERS):
+            letters.append(LETTERS[options.index(text)])
+        else:
+            letters.append(str(text))
+    return ", ".join(letters)
+
+
+async def handle_report_edit_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Boutons sous le message de signalement : texte / options / bonne réponse / supprimer."""
+    query = update.callback_query
+    if not is_admin(update):
+        await query.answer("⛔ Réservé aux admins.", show_alert=True)
+        return
+    try:
+        _, token, action = query.data.split(":", 2)
+    except ValueError:
+        await query.answer()
+        return
+
+    entry = REPORT_EDIT_CACHE.get(token)
+    if entry is None:
+        await query.answer("⌛ Signalement expiré. Utilise /reports pour le retrouver.", show_alert=True)
+        return
+    record = entry["record"]
+
+    if action == "x":
+        context.user_data.pop("admin_state", None)
+        await query.answer("Annulé")
+        try:
+            await query.edit_message_text("❌ Modification annulée.")
+        except BadRequest:
+            pass
+        return
+
+    if action == "d":
+        await query.answer()
+        await query.message.reply_text(
+            "🗑️ Supprimer définitivement cette question de la banque ?",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🗑️ Oui, supprimer", callback_data=f"{REPORT_DELETE_TAG}{token}:y")],
+                [InlineKeyboardButton("↩️ Non", callback_data=f"{REPORT_EDIT_TAG}{token}:x")],
+            ]),
+        )
+        return
+
+    if action not in ("t", "o", "c"):
+        await query.answer()
+        return
+
+    if action == "t":
+        prompt = (
+            "✏️ Envoie le NOUVEAU texte de la question.\n\n"
+            f"Actuel :\n{record.get('question')}\n\n"
+            "/annuler pour abandonner"
+        )
+    elif action == "o":
+        prompt = (
+            "🔤 Envoie les nouvelles options, UNE PAR LIGNE (2 à 5 options).\n"
+            "Tu peux écrire simplement le texte (sans A) ni tiret).\n\n"
+            f"Actuelles :\n{_report_option_lines(record)}\n\n"
+            "/annuler pour abandonner"
+        )
+    else:
+        prompt = (
+            "✅ Envoie la ou les bonnes réponses par leurs lettres, ex. : A  ou  A,C\n\n"
+            f"Options actuelles :\n{_report_option_lines(record)}\n"
+            f"Bonne(s) réponse(s) actuelle(s) : {_report_correct_letters(record) or '?'}\n\n"
+            "/annuler pour abandonner"
+        )
+
+    context.user_data["admin_state"] = {
+        "mode": "edit_report",
+        "action": action,
+        "record": record,
+        "token": token,
+    }
+    await query.answer()
+    await query.message.reply_text(
+        prompt,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("❌ Annuler", callback_data=f"{REPORT_EDIT_TAG}{token}:x")]]
+        ),
+    )
+
+
+async def handle_report_delete_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Confirmation « 🗑️ Oui, supprimer » : retire la question de la banque."""
+    query = update.callback_query
+    if not is_admin(update):
+        await query.answer("⛔ Réservé aux admins.", show_alert=True)
+        return
+    try:
+        _, token, confirm = query.data.split(":", 2)
+    except ValueError:
+        await query.answer()
+        return
+
+    entry = REPORT_EDIT_CACHE.get(token)
+    if entry is None:
+        await query.answer("⌛ Signalement expiré.", show_alert=True)
+        return
+    if confirm != "y":
+        await query.answer("Annulé")
+        return
+
+    record = entry["record"]
+    try:
+        filename, file_text = delete_reported_question(record)
+    except ValueError as e:
+        await query.answer()
+        try:
+            await query.edit_message_text(str(e))
+        except BadRequest:
+            pass
+        return
+
+    await query.answer("Supprimée")
+    ok, detail = await sync_module_to_github(
+        filename, file_text,
+        f"Supprimer une question signalee ({record.get('module')})",
+    )
+    if ok:
+        note = "\n☁️ Enregistré sur GitHub — redéploiement automatique."
+    else:
+        note = (
+            f"\n⚠️ Supprimée seulement sur Render ({detail}) : elle reviendra au "
+            "prochain redéploiement. Ajoute GITHUB_TOKEN dans Environment sur Render."
+        )
+    try:
+        await query.edit_message_text(f"🗑️ Question supprimée.\n📄 data/{filename}{note}")
+    except BadRequest:
+        pass
+
+
+async def cmd_cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """/annuler : abandonne une correction en cours."""
+    state = context.user_data.pop("admin_state", None)
+    if state:
+        await update.message.reply_text("❌ Modification annulée.")
 
 
 # ============ /send (raccourci admin) ============
@@ -1084,6 +1488,51 @@ async def admin_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
             target = int(text)
             context.user_data["admin_state"] = {"mode": "compose", "target": target}
             await msg.reply_text(f"✍️ Écris maintenant ton message pour 🆔 {target} :", reply_markup=cancel_markup())
+
+    elif mode == "edit_report":
+        action = state["action"]
+        record = state["record"]
+        token = state.get("token")
+        try:
+            filename, file_text = apply_report_edit(record, action, text)
+        except ValueError as e:
+            await msg.reply_text(f"{e}\n\nRéessaie, ou /annuler pour abandonner.")
+            raise ApplicationHandlerStop
+
+        context.user_data.pop("admin_state", None)
+
+        # Met à jour le cache pour pouvoir enchaîner d'autres corrections.
+        entry = REPORT_EDIT_CACHE.get(token) if token else None
+        if entry:
+            found = _locate_question(entry["record"])
+            if found:
+                q = found[2][found[3]]
+                opts = list(q.get("options") or [])
+                entry["record"].update({
+                    "question": q.get("question", ""),
+                    "options": opts,
+                    "correct_options": [
+                        opts[i] for i in (q.get("correct_option_ids") or []) if 0 <= i < len(opts)
+                    ],
+                })
+
+        ok, detail = await sync_module_to_github(
+            filename, file_text,
+            f"Correction question signalee ({record.get('module')})",
+        )
+        if ok:
+            note = "\n☁️ Enregistré sur GitHub — Render redéploie automatiquement (1–3 min)."
+        else:
+            note = (
+                f"\n⚠️ Correction appliquée seulement sur Render ({detail}).\n"
+                "Ajoute GITHUB_TOKEN dans Environment sur Render pour la rendre durable."
+            )
+        labels = {
+            "t": "✏️ Question modifiée.",
+            "o": "🔤 Options modifiées.",
+            "c": "✅ Bonne(s) réponse(s) mise(s) à jour.",
+        }
+        await msg.reply_text(labels.get(action, "✅ Modifié.") + note)
 
     elif mode == "compose":
         target = state["target"]
@@ -1731,12 +2180,15 @@ def build_application() -> Application:
     app.add_handler(CommandHandler("reports", cmd_reports))
     app.add_handler(CommandHandler("send", cmd_send))
     app.add_handler(CommandHandler("admin", cmd_admin))
+    app.add_handler(CommandHandler(["annuler", "cancel"], cmd_cancel))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
 
     app.add_handler(CallbackQueryHandler(handle_sub_check, pattern=rf"^{SUB_CHECK_CB}$"))
     app.add_handler(CallbackQueryHandler(handle_report_button, pattern=rf"^{REPORT_CALLBACK_PREFIX}"))
     app.add_handler(CallbackQueryHandler(handle_report_type, pattern=rf"^{REPORT_TYPE_PREFIX}"))
     app.add_handler(CallbackQueryHandler(handle_report_cancel, pattern=rf"^{REPORT_CANCEL_PREFIX}"))
+    app.add_handler(CallbackQueryHandler(handle_report_edit_callback, pattern=rf"^{REPORT_EDIT_TAG}"))
+    app.add_handler(CallbackQueryHandler(handle_report_delete_callback, pattern=rf"^{REPORT_DELETE_TAG}"))
     app.add_handler(CallbackQueryHandler(handle_admin_callback, pattern=rf"^{ADM}"))
     app.add_handler(CallbackQueryHandler(handle_reply_button, pattern=rf"^{REPLY_CB}"))
     app.add_handler(CallbackQueryHandler(handle_reply_cancel, pattern=rf"^{REPLY_CANCEL}$"))

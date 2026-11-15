@@ -70,10 +70,23 @@ git push -u origin main
 |---|---|
 | `BOT_TOKEN` | التوكن الجديد من @BotFather (**إلزامي**) |
 | `REQUIRED_CHANNEL` | `@qcMAX_batna` (أو اتركه فارغًا لتعطيل شرط الاشتراك) |
-| `ADMIN_USER_IDS` | `5696844039` (عدة أرقام مفصولة بفواصل) |
+| `ADMIN_USER_IDS` | `5696844039,5435592397` (عدة أرقام مفصولة بفواصل) |
 | `WEBHOOK_SECRET` | يُولّده Render تلقائيًا (لا تلمسه) |
+| `GITHUB_TOKEN` | توكن GitHub بصلاحية **Contents: Read and write** — لحفظ تصحيحات الأسئلة |
+| `GITHUB_REPO` | `yasuiesama05-dot/qcm6` |
+| `GITHUB_BRANCH` | `main` |
 
 `PORT` و`RENDER_EXTERNAL_URL` يضيفهما Render تلقائيًا.
+
+### عن `GITHUB_TOKEN`
+عندما يصحّح الأدمن سؤالًا من رسالة الإبلاغ، يعدّل البوت ملف
+`data/<module>.json` **ويحوّل التعديل إلى commit على GitHub** حتى لا يضيع
+عند إعادة نشر Render (قرص Render مؤقت). بدونه: التصحيح يعمل لكنه يضيع عند
+أول إعادة تشغيل.
+
+أنشئ التوكن من: GitHub → **Settings** → **Developer settings** →
+**Personal access tokens** → **Fine-grained tokens** → اختر المستودع
+`qcm6` فقط → **Repository permissions** → **Contents: Read and write**.
 
 اضغط **Save** → سيُعاد النشر تلقائيًا.
 
