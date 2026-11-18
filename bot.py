@@ -48,7 +48,10 @@ Chaque signalement est ajouté à reported_questions.json (type, question,
 options, bonne(s) réponse(s), module/leçon, utilisateur, date) ET envoyé
 immédiatement en message privé à chaque admin de ADMIN_USER_IDS, avec des
 boutons pour corriger directement depuis Telegram (texte, options, bonne
-réponse, suppression). La correction est enregistrée sur GitHub (API) pour
+réponse, suppression). La question et ses options y sont présentées dans un
+bloc copiable (un appui = tout le bloc est copié, sans la bonne réponse) pour
+pouvoir les coller dans une IA et vérifier la réponse.
+La correction est enregistrée sur GitHub (API) pour
 survivre aux redéploiements de Render. Sans GITHUB_TOKEN, elle reste locale
 au serveur et est perdue au redéploiement suivant.
 La commande /reports reste disponible pour récupérer le fichier complet.
@@ -675,46 +678,72 @@ async def save_report(record: dict):
             logger.error("Impossible d'écrire dans %s : %s", REPORTS_FILE, e)
 
 
+def _esc(value, limit: int | None = None) -> str:
+    """Échappe un texte pour le HTML Telegram (et le tronque si demandé)."""
+    text = str(value if value is not None else "")
+    if limit is not None and len(text) > limit:
+        text = text[: max(0, limit - 1)] + "…"
+    return html.escape(text)
+
+
+def build_copy_block(record: dict) -> str:
+    """Texte prêt à coller ailleurs (IA, moteur de recherche) : la question et
+    ses options UNIQUEMENT, sans aucune indication de la bonne réponse — sinon
+    l'IA serait influencée par la réponse déjà enregistrée."""
+    lines = [_esc(record.get("question"), 700), ""]
+    for i, opt in enumerate(record.get("options") or []):
+        letter = LETTERS[i] if i < len(LETTERS) else str(i + 1)
+        lines.append(f"{letter}. {_esc(opt, 200)}")
+    return "\n".join(lines)
+
+
 def format_report_message(record: dict) -> str:
-    """Construit le texte du message privé envoyé aux admins pour un signalement."""
+    """Message privé envoyé aux admins pour un signalement.
+
+    La question et ses options sont placées dans un bloc <pre> : sur Telegram,
+    un simple appui dessus copie TOUT le bloc, prêt à être collé dans une IA
+    pour vérifier la réponse. La bonne réponse enregistrée est affichée À PART,
+    pour ne jamais être copiée avec la question."""
     options = record.get("options") or []
     correct_texts = record.get("correct_options") or []
-    correct_indexes = {i for i, opt in enumerate(options) if opt in correct_texts}
 
     lines = [
         "🚩 إبلاغ جديد عن سؤال",
         "Nouveau signalement de question",
         "",
-        f"النوع / Type : {record.get('report_type_label') or record.get('report_type')}",
-        f"المستخدم / Par : {record.get('username') or '?'} (ID: {record.get('user_id')})",
-        f"التاريخ / Date : {record.get('date')}",
+        f"النوع / Type : {_esc(record.get('report_type_label') or record.get('report_type'))}",
+        f"المستخدم / Par : {_esc(record.get('username') or '?')} (ID: {_esc(record.get('user_id') or '?')})",
+        f"التاريخ / Date : {_esc(record.get('date'))}",
     ]
     if record.get("module"):
-        lines.append(f"📚 Module : {record['module']}")
+        lines.append(f"📚 Module : {_esc(record['module'])}")
     path = record.get("path") or []
     if path:
-        lines.append(f"📂 Leçon : {' > '.join(str(p) for p in path)}")
+        lines.append(f"📂 Leçon : {_esc(' > '.join(str(p) for p in path))}")
     if record.get("quiz_label"):
-        lines.append(f"🏷️ Quiz : {record['quiz_label']}")
+        lines.append(f"🏷️ Quiz : {_esc(record['quiz_label'])}")
 
-    lines += ["", f"❓ {record.get('question')}", ""]
-    for i, opt in enumerate(options):
-        mark = "✅" if i in correct_indexes else "▪️"
-        letter = LETTERS[i] if i < len(LETTERS) else str(i + 1)
-        lines.append(f"{mark} {letter}. {opt}")
+    lines += [
+        "",
+        "📋 <b>السؤال مع الخيارات — اضغط على الكتلة للنسخ</b>",
+        "Question + options (appuie dessus pour copier) :",
+        f"<pre>{build_copy_block(record)}</pre>",
+    ]
 
     if correct_texts:
         letters = []
         for text in correct_texts:
             try:
                 idx = options.index(text)
-                letters.append(LETTERS[idx] if idx < len(LETTERS) else text)
+                letters.append(LETTERS[idx] if idx < len(LETTERS) else str(text))
             except ValueError:
-                letters.append(text)
-        lines += ["", f"✔️ Bonne(s) réponse(s) : {', '.join(letters)}"]
+                letters.append(str(text))
+        lines += [
+            "",
+            f"✔️ <b>Bonne(s) réponse(s) enregistrée(s) :</b> {_esc(', '.join(letters))}",
+        ]
 
-    text = "\n".join(lines)
-    return text[:TG_MESSAGE_MAX]
+    return "\n".join(lines)
 
 
 def build_report_edit_markup(token: str) -> InlineKeyboardMarkup:
@@ -758,7 +787,8 @@ async def notify_admins_about_report(context: ContextTypes.DEFAULT_TYPE, record:
         try:
             await call_with_retry(
                 lambda aid=admin_id: context.bot.send_message(
-                    aid, text, reply_markup=markup, disable_web_page_preview=True
+                    aid, text, reply_markup=markup,
+                    parse_mode="HTML", disable_web_page_preview=True,
                 ),
                 label=f"send_message(signalement admin {admin_id})",
             )
