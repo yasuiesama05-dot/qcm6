@@ -6,6 +6,9 @@
 bot_users.json
 reported_questions.json
 
+# Sauvegardes automatiques de l'éditeur local
+backups/
+
 # Python
 __pycache__/
 *.py[cod]
