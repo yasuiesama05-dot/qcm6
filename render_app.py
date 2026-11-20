@@ -28,17 +28,25 @@ import logging
 import os
 import re
 import signal
+import sys
+import time
 
 from aiohttp import web
 from telegram import Update
 
-from bot import build_application
+from bot import ADMIN_USER_IDS, build_application
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
 )
 logger = logging.getLogger("render_app")
+
+# Identifiant de la version déployée : Render fournit RENDER_GIT_COMMIT.
+# Il est affiché par / et /version, ce qui permet de vérifier en une requête
+# que le service tourne bien sur le dernier commit de GitHub.
+BUILD = (os.environ.get("RENDER_GIT_COMMIT") or "local")[:7]
+BOOT_TIME = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
 
 def _webhook_secret(token: str) -> str:
@@ -63,6 +71,24 @@ def _public_base_url() -> str:
     return url.rstrip("/")
 
 
+def _should_notify_start() -> bool:
+    """Vrai une seule fois par build : évite d'envoyer un message à chaque
+    réveil de l'instance gratuite (Render endort le service après 15 min)."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".boot_build")
+    try:
+        with open(path, encoding="utf-8") as f:
+            if f.read().strip() == BUILD:
+                return False
+    except OSError:
+        pass
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(BUILD)
+    except OSError:
+        pass
+    return True
+
+
 async def main() -> None:
     token = (os.environ.get("BOT_TOKEN") or "").strip()
     if not token:
@@ -83,25 +109,47 @@ async def main() -> None:
     async def telegram_webhook(request: web.Request) -> web.Response:
         """Reçoit un update Telegram et le pousse dans la file de PTB."""
         if request.headers.get("X-Telegram-Bot-Api-Secret-Token") != secret:
+            logger.warning("Webhook refusé : en-tête secret absent ou invalide")
             return web.Response(status=403, text="Forbidden")
         try:
             data = await request.json()
         except Exception:
+            logger.warning("Webhook : corps JSON invalide")
             return web.Response(status=400, text="Bad Request")
         update = Update.de_json(data, tg_app.bot)
-        if update is not None:
-            await tg_app.update_queue.put(update)
+        if update is None:
+            logger.warning("Webhook : update non reconnu (%s)", list(data)[:5])
+            return web.Response(text="OK")
+        logger.info(
+            "Update %s reçu (user %s) -> file",
+            update.update_id,
+            update.effective_user.id if update.effective_user else "?",
+        )
+        await tg_app.update_queue.put(update)
         return web.Response(text="OK")
 
     async def health(request: web.Request) -> web.Response:
         """Sert aussi de endpoint « keep-alive » pour éviter que le service
         gratuit de Render ne s'endorme après 15 min d'inactivité."""
-        return web.Response(text="✅ Le bot QCM est en ligne (mode webhook).")
+        return web.Response(
+            text=f"✅ Le bot QCM est en ligne (mode webhook). build {BUILD}"
+        )
+
+    async def version(request: web.Request) -> web.Response:
+        """Version réellement déployée (vérifier qu'un redéploiement a eu lieu)."""
+        return web.json_response({
+            "build": BUILD,
+            "boot_time": BOOT_TIME,
+            "python": sys.version.split()[0],
+            "admins": sorted(ADMIN_USER_IDS),
+            "webhook_configured": bool(_public_base_url()),
+        })
 
     server = web.Application()
     server.router.add_post(f"/{url_path}", telegram_webhook)
     server.router.add_get("/", health)
     server.router.add_get("/healthz", health)
+    server.router.add_get("/version", version)
 
     runner = web.AppRunner(server)
     await runner.setup()
@@ -129,6 +177,27 @@ async def main() -> None:
                 if attempt == 5:
                     raise
                 await asyncio.sleep(5)
+
+        # Message de démarrage aux admins : preuve visible, depuis Telegram,
+        # que l'instance tourne bien sur ce commit (aucun accès aux logs requis).
+        if _should_notify_start():
+            boot_text = (
+                "✅ <b>البوت اشتغل الآن</b>\n\n"
+                f"Build : <code>{BUILD}</code>\n"
+                f"⏱ {BOOT_TIME}\n"
+                f"🌐 {base_url}\n\n"
+                "أرسل /start للتجربة. أي خطأ داخلي سيصلك هنا أيضًا."
+            )
+            for admin_id in sorted(ADMIN_USER_IDS):
+                try:
+                    await tg_app.bot.send_message(
+                        admin_id, boot_text, parse_mode="HTML",
+                        disable_web_page_preview=True,
+                    )
+                except Exception as e:
+                    logger.warning(
+                        "Message de démarrage non envoyé à %s : %s", admin_id, e
+                    )
     else:
         logger.warning(
             "RENDER_EXTERNAL_URL absent : le webhook Telegram n'a pas été "

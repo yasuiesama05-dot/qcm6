@@ -5,6 +5,7 @@
 # Données d'exécution (ne doivent pas être versionnées)
 bot_users.json
 reported_questions.json
+.boot_build
 
 # Sauvegardes automatiques de l'éditeur local
 backups/

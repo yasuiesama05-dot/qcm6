@@ -97,6 +97,7 @@ import os
 import random
 import re
 import time
+import traceback
 import uuid
 
 from telegram import (
@@ -2169,6 +2170,48 @@ async def periodic_question_context_cleanup(context: ContextTypes.DEFAULT_TYPE):
         _save_users()
 
 
+async def on_error(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Envoie la traceback aux admins.
+
+    Sur Render (ou tout hébergeur sans accès facile aux logs), une exception
+    dans un handler ne laisse AUCUNE trace visible : l'utilisateur ne reçoit
+    rien et Telegram ne signale rien (le webhook a bien répondu 200). Ce
+    handler transforme donc chaque erreur en message privé lisible.
+    """
+    err = context.error
+    logger.error("Exception pendant le traitement d'un update", exc_info=err)
+
+    details = "".join(
+        traceback.format_exception(type(err), err, err.__traceback__)
+    ) if err else "inconnue"
+    # On garde la fin (l'erreur elle-même) et on borne la taille.
+    details = details.strip()[-1200:]
+
+    origin = ""
+    if isinstance(update, Update):
+        u = update.effective_user
+        if u:
+            origin = f"👤 {u.full_name} (ID: {u.id})\n"
+        if update.message and update.message.text:
+            origin += f"✉️ {update.message.text[:80]}\n"
+        elif update.callback_query:
+            origin += f"🔘 {update.callback_query.data}\n"
+
+    text = (
+        "⚠️ <b>Erreur dans le bot</b>\n\n"
+        f"{html.escape(origin)}"
+        f"<pre>{html.escape(details)}</pre>"
+    )
+
+    for admin_id in ADMIN_USER_IDS:
+        try:
+            await context.bot.send_message(
+                admin_id, text, parse_mode="HTML", disable_web_page_preview=True
+            )
+        except Exception:
+            logger.warning("Impossible d'envoyer l'erreur à l'admin %s", admin_id)
+
+
 def build_application() -> Application:
     """Construit l'Application PTB (handlers + job queue), sans la démarrer.
     Utilisée à la fois par le mode polling (test local) et le mode webhook
@@ -2224,6 +2267,10 @@ def build_application() -> Application:
     app.add_handler(CallbackQueryHandler(handle_reply_cancel, pattern=rf"^{REPLY_CANCEL}$"))
 
     app.job_queue.run_repeating(periodic_question_context_cleanup, interval=QUESTION_CONTEXT_CLEANUP_INTERVAL, first=QUESTION_CONTEXT_CLEANUP_INTERVAL)
+
+    # Toute exception non gérée est envoyée en message privé aux admins
+    # (voir on_error) : indispensable pour diagnostiquer sans les logs.
+    app.add_error_handler(on_error)
     return app
 
 
